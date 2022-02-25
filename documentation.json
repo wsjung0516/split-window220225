@@ -10164,7 +10164,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -10174,7 +10174,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -10274,21 +10274,21 @@
                 "name": "initial_value",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  item: {\r\n    imageId: 1,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
-            },
-            {
-                "name": "initial_value",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  item: {\r\n    imageId: 3,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
+            },
+            {
+                "name": "initial_value",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  item: {\r\n    imageId: 1,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
             },
             {
                 "name": "initial_value",
@@ -10513,11 +10513,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/carousel/carousel-main/carousel-main.component.stories.ts",
+                "file": "src/app/components/grid/display-grid/display-grid-template.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<CarouselMainComponent>",
-                "defaultValue": "(args: CarouselMainComponent) => ({\n  props: args,\n  template: `\n    <app-carousel-main [queryElement]=\"queryElement\"></app-carousel-main>\n  `,\n\n})"
+                "type": "Story<DisplayGridTemplateComponent>",
+                "defaultValue": "(args: DisplayGridTemplateComponent) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  template:`\r\n    <display-grid-template [templateName]=\"templateName\" [templateHeight]=\"templateHeight\" >\r\n    </display-grid-template>\r\n  `\r\n})"
             },
             {
                 "name": "Template",
@@ -10528,16 +10528,6 @@
                 "deprecationMessage": "",
                 "type": "Story<DisplayGridComponent>",
                 "defaultValue": "(args: DisplayGridComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectedTemplate: action('onSelectTemplate')\r\n  },\r\n  template: `\r\n    <div class=\"text-red-600\">Display Grid</div>\r\n    <display-grid [splitMode]=\"splitMode\"\r\n        (onSelectTemplate)=\"onSelectedTemplate($event)\">\r\n    </display-grid>\r\n    `\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/grid/display-grid/display-grid-template.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<DisplayGridTemplateComponent>",
-                "defaultValue": "(args: DisplayGridTemplateComponent) => ({\r\n  props: {\r\n    ...args\r\n  },\r\n  template:`\r\n    <display-grid-template [templateName]=\"templateName\" [templateHeight]=\"templateHeight\" >\r\n    </display-grid-template>\r\n  `\r\n})"
             },
             {
                 "name": "Template",
@@ -10563,21 +10553,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ThumbnailItemComponent>",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ThumbnailListComponent>",
                 "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <thumbnail-list [selectedImage]=\"selectedImage\"\r\n        [currentImages]=\"currentImages\"\r\n        (selected)=\"onSelected($event)\">\r\n    </thumbnail-list>\r\n  `\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/carousel/carousel-main/carousel-main.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CarouselMainComponent>",
+                "defaultValue": "(args: CarouselMainComponent) => ({\n  props: args,\n  template: `\n    <app-carousel-main [queryElement]=\"queryElement\"></app-carousel-main>\n  `,\n\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ThumbnailItemComponent>",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
             },
             {
                 "name": "Template",
@@ -10836,7 +10836,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "dc925f84-818d-4fd6-a2fc-0953281ee361",
+                        "destrucuredGroupId": "6f650c52-8d37-4843-99d9-0afd19b3eab2",
                         "destructuredParameter": true
                     }
                 ],
@@ -10846,7 +10846,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "dc925f84-818d-4fd6-a2fc-0953281ee361",
+                        "destrucuredGroupId": "6f650c52-8d37-4843-99d9-0afd19b3eab2",
                         "destructuredParameter": true,
                         "tagName": {
                             "text": "param"
@@ -10868,7 +10868,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "3d551c93-3aac-4f83-a449-2c49afab30e8",
+                        "destrucuredGroupId": "08a42e21-8ed9-40e8-99a9-0dae257684a8",
                         "destructuredParameter": true
                     }
                 ],
@@ -10878,7 +10878,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "3d551c93-3aac-4f83-a449-2c49afab30e8",
+                        "destrucuredGroupId": "08a42e21-8ed9-40e8-99a9-0dae257684a8",
                         "destructuredParameter": true,
                         "tagName": {
                             "text": "param"
@@ -10917,7 +10917,7 @@
             },
             {
                 "name": "initialize",
-                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "ctype": "miscellaneous",
                 "subtype": "function",
                 "deprecated": false,
@@ -10927,7 +10927,7 @@
             },
             {
                 "name": "initialize",
-                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
                 "ctype": "miscellaneous",
                 "subtype": "function",
                 "deprecated": false,
@@ -11110,48 +11110,6 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
-            "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "initial_value",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  item: {\r\n    imageId: 1,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
-                },
-                {
-                    "name": "SelectedItem",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ThumbnailItemComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
-                }
-            ],
             "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts": [
                 {
                     "name": "Default",
@@ -11202,6 +11160,48 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
+                }
+            ],
+            "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "initial_value",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  item: {\r\n    imageId: 1,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
+                },
+                {
+                    "name": "SelectedItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ThumbnailItemComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
                 }
             ],
             "src/app/components/series/seires-list/series-list.component.stories.ts": [
@@ -11664,7 +11664,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "dc925f84-818d-4fd6-a2fc-0953281ee361",
+                            "destrucuredGroupId": "6f650c52-8d37-4843-99d9-0afd19b3eab2",
                             "destructuredParameter": true
                         }
                     ],
@@ -11674,7 +11674,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "dc925f84-818d-4fd6-a2fc-0953281ee361",
+                            "destrucuredGroupId": "6f650c52-8d37-4843-99d9-0afd19b3eab2",
                             "destructuredParameter": true,
                             "tagName": {
                                 "text": "param"
@@ -11769,7 +11769,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "3d551c93-3aac-4f83-a449-2c49afab30e8",
+                            "destrucuredGroupId": "08a42e21-8ed9-40e8-99a9-0dae257684a8",
                             "destructuredParameter": true
                         }
                     ],
@@ -11779,7 +11779,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "3d551c93-3aac-4f83-a449-2c49afab30e8",
+                            "destrucuredGroupId": "08a42e21-8ed9-40e8-99a9-0dae257684a8",
                             "destructuredParameter": true,
                             "tagName": {
                                 "text": "param"
@@ -11934,10 +11934,10 @@
                     ]
                 }
             ],
-            "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts": [
+            "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts": [
                 {
                     "name": "initialize",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                     "ctype": "miscellaneous",
                     "subtype": "function",
                     "deprecated": false,
@@ -11946,10 +11946,10 @@
                     "args": []
                 }
             ],
-            "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts": [
+            "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts": [
                 {
                     "name": "initialize",
-                    "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
                     "ctype": "miscellaneous",
                     "subtype": "function",
                     "deprecated": false,
