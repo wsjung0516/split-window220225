@@ -1,14 +1,7 @@
-import {ThumbnailItemComponent} from "../thumbnail-item/thumbnail-item.component";
 import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {ThumbnailModule} from "../thumbnail.module";
-import {NgxsModule, StateStream, Store} from "@ngxs/store";
-import {StatusState} from "../../../../state/status/status.state";
-import {InternalStateOperations} from "@ngxs/store/src/internal/state-operations";
-import {userEvent} from "@storybook/testing-library";
-import {NgxsSelectSnapshotModule} from "@ngxs-labs/select-snapshot";
 import {action} from "@storybook/addon-actions";
 import {ThumbnailListComponent} from "./thumbnail-list.component";
-import {SelectedItem} from "../thumbnail-item/thumbnail-item.component.stories";
 
 export default {
   title: 'Thumbnail/ThumbnailListComponent',
@@ -27,7 +20,10 @@ const Template: Story<ThumbnailListComponent> = (args) => ({
     onSelected: action('selected')
   },
   template: `
-    <thumbnail-list [selectedImage]="selectedImage" [currentImages]="currentImages" (selected)="onSelected($event)"></thumbnail-list>
+    <thumbnail-list [selectedImage]="selectedImage"
+        [currentImages]="currentImages"
+        (selected)="onSelected($event)">
+    </thumbnail-list>
   `
 });
 export const Default = Template.bind({});

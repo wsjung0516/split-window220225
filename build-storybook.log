@@ -21,162 +21,633 @@ Node.js version : v16.13.1
 
 Operating system : Windows 10
 
-[09:46:21] No configuration file found, switching to CLI flags.
-[09:46:21] Using tsconfig file : C:\Angular\split-window220225\tsconfig.json
-[09:46:21] Including      : C:\Angular\split-window220225\.browserslistrc
-[09:46:21] Including      : C:\Angular\split-window220225\.editorconfig
-[09:46:21] Including      : C:\Angular\split-window220225\.gitignore
-[09:46:21] Including      : C:\Angular\split-window220225\angular.json
-[09:46:21] Including      : C:\Angular\split-window220225\karma.conf.js
-[09:46:21] Including      : C:\Angular\split-window220225\build-storybook.log
-[09:46:21] Including      : C:\Angular\split-window220225\package-lock.json
-[09:46:21] Including      : C:\Angular\split-window220225\package.json
-[09:46:21] Including      : C:\Angular\split-window220225\README.md
-[09:46:21] Including      : C:\Angular\split-window220225\tailwind.config.js
-[09:46:21] Including      : C:\Angular\split-window220225\tsconfig.app.json
-[09:46:21] Including      : C:\Angular\split-window220225\tsconfig.json
-[09:46:21] Including      : C:\Angular\split-window220225\tsconfig.spec.json
-[09:46:21] Including      : C:\Angular\split-window220225\.storybook\main.js
-[09:46:21] Including      : C:\Angular\split-window220225\.storybook\preview.js
-[09:46:21] Ignoring       : C:\Angular\split-window220225\.storybook\typings.d.ts
-[09:46:21] Including      : C:\Angular\split-window220225\.storybook\tsconfig.json
-[09:46:21] Including      : C:\Angular\split-window220225\.idea\.gitignore
-[09:46:21] Including      : C:\Angular\split-window220225\.idea\modules.xml
-[09:46:21] Including      : C:\Angular\split-window220225\.idea\vcs.xml
-[09:46:21] Including      : C:\Angular\split-window220225\.idea\split-window220225.iml
-[09:46:21] Including      : C:\Angular\split-window220225\.idea\workspace.xml
-[09:46:21] Including      : C:\Angular\split-window220225\src\index.html
-[09:46:21] Including      : C:\Angular\split-window220225\src\favicon.ico
-[09:46:21] Including      : C:\Angular\split-window220225\src\main.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\polyfills.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\styles.css
-[09:46:21] Including      : C:\Angular\split-window220225\src\test.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\app\app.component.css
-[09:46:21] Including      : C:\Angular\split-window220225\src\app\app.component.html
-[09:46:21] Including      : C:\Angular\split-window220225\src\app\app.module.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\app\app.component.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\assets\.gitkeep
-[09:46:21] Ignoring       : C:\Angular\split-window220225\src\app\app.component.spec.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\environments\environment.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\environments\environment.prod.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\button.css
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\header.component.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\Button.stories.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\header.css
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\button.component.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\Header.stories.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\Introduction.stories.mdx
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\page.component.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\page.css
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\Page.stories.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\User.ts
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\code-brackets.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\comments.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\flow.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\direction.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\colors.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\plugin.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\repo.svg
-[09:46:21] Including      : C:\Angular\split-window220225\src\stories\assets\stackalt.svg
-[09:46:21] Searching package.json file
-[09:46:21] package.json file found
-[09:46:21] Processing package.json dependencies
-[09:46:21] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
-[09:46:21] README.md file found
-[09:46:21] Error during C:\Angular\split-window220225\CHANGELOG read
-[09:46:21] Continuing without CHANGELOG.md file
-[09:46:21] Error during C:\Angular\split-window220225\CONTRIBUTING read
-[09:46:21] Continuing without CONTRIBUTING.md file
-[09:46:21] Error during C:\Angular\split-window220225\LICENSE read
-[09:46:21] Continuing without LICENSE.md file
-[09:46:21] Error during C:\Angular\split-window220225\TODO read
-[09:46:21] Continuing without TODO.md file
-[09:46:21] Get dependencies data
-[09:46:21] parsing        : C:/Angular/split-window220225/src/main.ts
-[09:46:21] parsing        : C:/Angular/split-window220225/src/polyfills.ts
-[09:46:21] parsing        : C:/Angular/split-window220225/src/test.ts
-[09:46:21] found          : require
-[09:46:21] found          : context
-[09:46:21] parsing        : C:/Angular/split-window220225/src/app/app.module.ts
-[09:46:21] found          : AppModule
-[09:46:21]                : - imports:
-[09:46:21]                : 	- BrowserModule
-[09:46:21]                : - declarations:
-[09:46:21]                : 	- AppComponent
-[09:46:21]                : - bootstrap:
-[09:46:21]                : 	- AppComponent
-[09:46:21] parsing        : C:/Angular/split-window220225/src/app/app.component.ts
-[09:46:21] found          : AppComponent
-[09:46:21] parsing        : C:/Angular/split-window220225/src/environments/environment.ts
-[09:46:21] found          : environment
-[09:46:21] parsing        : C:/Angular/split-window220225/src/environments/environment.prod.ts
-[09:46:21] found          : environment
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/header.component.ts
-[09:46:21] found          : HeaderComponent
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/Button.stories.ts
-[09:46:21] found          : Template
-[09:46:21] found          : Primary
-[09:46:21] found          : Secondary
-[09:46:21] found          : Large
-[09:46:21] found          : Small
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/button.component.ts
-[09:46:21] found          : ButtonComponent
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/Header.stories.ts
-[09:46:21] found          : Template
-[09:46:21] found          : LoggedIn
-[09:46:21] found          : LoggedOut
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/page.component.ts
-[09:46:21] found          : PageComponent
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/Page.stories.ts
-[09:46:21] found          : Template
-[09:46:21] found          : LoggedOut
-[09:46:21] found          : LoggedIn
-[09:46:21] parsing        : C:/Angular/split-window220225/src/stories/User.ts
-[09:46:21] found          : User
-[09:46:21] -------------------
-[09:46:21] Project statistics 
-[09:46:21] - files      : 53
-[09:46:21] - module     : 1
-[09:46:21] - component  : 4
-[09:46:21] - interface  : 1
-[09:46:21] -------------------
-[09:46:21] Prepare components
-[09:46:21]  AppComponent has a templateUrl, include it
-[09:46:21]  AppComponent has styleUrls, include them
-[09:46:21]  ButtonComponent has styleUrls, include them
-[09:46:21]  HeaderComponent has styleUrls, include them
-[09:46:21]  PageComponent has styleUrls, include them
-[09:46:21] Prepare modules
-[09:46:21] Prepare interfaces
-[09:46:21] Prepare miscellaneous
-[09:46:21] Process documentation coverage report
-[09:46:21] Generating documentation in export format json
-[09:46:21] Documentation generated in ./ in 0.4 seconds
+[13:12:22] No configuration file found, switching to CLI flags.
+[13:12:22] Using tsconfig file : C:\Angular\split-window220225\tsconfig.json
+[13:12:22] Including      : C:\Angular\split-window220225\.browserslistrc
+[13:12:22] Including      : C:\Angular\split-window220225\.editorconfig
+[13:12:22] Including      : C:\Angular\split-window220225\.gitignore
+[13:12:22] Including      : C:\Angular\split-window220225\angular.json
+[13:12:22] Including      : C:\Angular\split-window220225\build-storybook.log
+[13:12:22] Including      : C:\Angular\split-window220225\documentation.json
+[13:12:22] Including      : C:\Angular\split-window220225\karma.conf.js
+[13:12:22] Including      : C:\Angular\split-window220225\README.md
+[13:12:22] Including      : C:\Angular\split-window220225\package.json
+[13:12:22] Including      : C:\Angular\split-window220225\tailwind.config.js
+[13:12:22] Including      : C:\Angular\split-window220225\package-lock.json
+[13:12:22] Including      : C:\Angular\split-window220225\tsconfig.app.json
+[13:12:22] Including      : C:\Angular\split-window220225\tsconfig.json
+[13:12:22] Including      : C:\Angular\split-window220225\tsconfig.spec.json
+[13:12:22] Including      : C:\Angular\split-window220225\tsconfig.worker.json
+[13:12:22] Including      : C:\Angular\split-window220225\.storybook\main.js
+[13:12:22] Including      : C:\Angular\split-window220225\.storybook\preview.js
+[13:12:22] Ignoring       : C:\Angular\split-window220225\.storybook\typings.d.ts
+[13:12:22] Including      : C:\Angular\split-window220225\.storybook\tsconfig.json
+[13:12:22] Including      : C:\Angular\split-window220225\.idea\split-window220225.iml
+[13:12:22] Including      : C:\Angular\split-window220225\.idea\modules.xml
+[13:12:22] Including      : C:\Angular\split-window220225\.idea\.gitignore
+[13:12:22] Including      : C:\Angular\split-window220225\.idea\vcs.xml
+[13:12:22] Including      : C:\Angular\split-window220225\.idea\workspace.xml
+[13:12:22] Including      : C:\Angular\split-window220225\src\favicon.ico
+[13:12:22] Including      : C:\Angular\split-window220225\src\index.html
+[13:12:22] Including      : C:\Angular\split-window220225\src\main.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\polyfills.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\styles.css
+[13:12:22] Including      : C:\Angular\split-window220225\src\test-setup.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\test.ts
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\236.e33a8f55.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\236.e33a8f55.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\295.bf671fb241a668199d84.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\308.45640eb3.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\308.45640eb3.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\308.ddaa3f4199a6225f947b.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\308.ddaa3f4199a6225f947b.manager.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\319.4d0e75a454217295b4bb.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\331.5e361658fae9591e7ec9.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\331.5e361658fae9591e7ec9.manager.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\331.a382e60d.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\331.a382e60d.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\341.3c42f53d.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\39.5e67c080.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\39.5e67c080.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\402.1f8018bc.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\411.9da8e2cf.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\411.9da8e2cf.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\459.c18f2256.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\459.dbd7a3476bff0a55769e.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\574.356712c0.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\574.75d08ef74cd6e873cf76.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\613.7c4fcca9.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\641.9ec938fd.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\641.9ec938fd.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\669.3d1568d6.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\701.f02ff712.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\881.9d208e2f.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\891.2be21154920daff564e8.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\891.2be21154920daff564e8.manager.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\935.d2b3f4d1.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\935.d2b3f4d1.iframe.bundle.js.LICENSE.txt
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\favicon.ico
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\iframe.html
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\index.html
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\main.05699058b8b9c1597c86.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\main.135be8a5.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\runtime~main.260e19a65ef0cbb777f4.manager.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\runtime~main.391e0d32.iframe.bundle.js
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\app.component.css
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\app.component.html
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\app.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\app.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\app.module.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\app.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\.gitkeep
+[13:12:22] Including      : C:\Angular\split-window220225\src\environments\environment.prod.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\environments\environment.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\shared\angular-materials.module.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\button.css
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\Button.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\header.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\header.css
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\Header.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\Introduction.stories.mdx
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\page.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\page.css
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\button.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\Page.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\User.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\axiosComm.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\crowling.js
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\down-scale-image.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\jquery.js
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\XMLHttpComm.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\services\carousel.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\services\cashe-series.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\services\image.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\services\split.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\models\data.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\icon_split\icon_split_black.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\icon_split\icon_split_white.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\images\images-1.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\images\images-3.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\animal.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\baby.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\banana.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\forest.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\happiness.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\house.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\love.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\mountain.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\json\sea.json
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\md\grid.md
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\100.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\101.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\102.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\103.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\104.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\105.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\106.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\107.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\108.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\109.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\110.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\111.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\112.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\113.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\114.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\115.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\116.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\117.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\118.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\120.jpeg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\119.jpeg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\121.jpeg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\124.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\123.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\122.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\125.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\126.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\127.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\sample_images\128.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\workers\additional-loading.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\workers\carousel.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\workers\series.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\split_window_icon\icon_four.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\split_window_icon\icon_one.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\split_window_icon\icon_three.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\split_window_icon\icon_two.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\code-brackets.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\colors.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\comments.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\direction.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\flow.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\plugin.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\repo.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\stories\assets\stackalt.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\state\status\status.actions.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\state\status\status.state.ts
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\images\images-1.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\images\images-3.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\animal.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\baby.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\banana.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\forest.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\happiness.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\house.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\love.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\mountain.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\json\sea.json
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\icon_split\icon_split_black.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\icon_split\icon_split_white.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\100.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\101.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\md\grid.md
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\102.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\103.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\104.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\105.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\106.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\107.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\108.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\109.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\110.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\111.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\113.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\112.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\114.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\115.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\116.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\117.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\118.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\119.jpeg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\120.jpeg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\121.jpeg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\123.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\124.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\125.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\126.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\127.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\128.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\workers\additional-loading.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\workers\carousel.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\sample_images\122.jpg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\workers\series.worker.ts
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\split_window_icon\icon_four.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\split_window_icon\icon_one.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\split_window_icon\icon_three.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\split_window_icon\icon_two.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\code-brackets.2e1112d7.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\colors.a4bd0486.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\comments.a3859089.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\direction.b770f9af.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\plugin.d494b228.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\repo.6d496322.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\flow.edad2ac1.svg
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\static\media\stackalt.dba9fbb3.svg
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\carousel\carousel.module.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\grid.module.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\home\home.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\home\home.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\home\home.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\home\home.module.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail.module.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\series\series-item.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\series\series.module.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\spinner\spinner-interceptor.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\spinner\spinner-handler.service.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\utils\spinner\spinner.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\md\images\split-structure.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\md\images\split-window1.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\md\images\split-window2.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\assets\md\images\split-window3.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\md\images\split-structure.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\md\images\split-window1.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\md\images\split-window2.png
+[13:12:22] Including      : C:\Angular\split-window220225\storybook-static\assets\md\images\split-window3.png
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\carousel\carousel-main\carousel-main.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\carousel\carousel-main\carousel-main.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\display-grid\display-grid-template.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\display-grid\display-grid.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\display-grid\display-grid.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\display-grid\display-grid-template.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\grid-directives\grid-template.directive.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\grid-directives\select-color.directive.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\grid\grid-menu\grid-menu.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\grid-menu\grid-menu.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\grid-menu\grid-menu.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\grid\toolbar\toolbar.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\toolbar\toolbar.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\toolbar\toolbar.component.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\grid\grid-template\grid-template.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\thumbnail\select-thumbnail\select-thumbnail.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\thumbnail\select-thumbnail\select-thumbnail.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail-item\thumbnail-item.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail-item\thumbnail-item.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail-item\thumbnail-item.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail-list\thumbnail-list.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail-list\thumbnail-list.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\thumbnail\thumbnail-list\thumbnail-list.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\series\seires-list\series-list.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\series\seires-list\series-list.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\series\seires-list\series-list.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\series\series-item\series-item.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\series\series-item\series-item.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\series\series-item\series-item.component.ts
+[13:12:22] Ignoring       : C:\Angular\split-window220225\src\app\components\carousel\carousel-main\carousel-main-display\carousel-main-display.component.spec.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\carousel\carousel-main\carousel-main-display\carousel-main-display.component.stories.ts
+[13:12:22] Including      : C:\Angular\split-window220225\src\app\components\carousel\carousel-main\carousel-main-display\carousel-main-display.component.ts
+[13:12:22] Searching package.json file
+[13:12:22] package.json file found
+[13:12:22] Processing package.json dependencies
+[13:12:22] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[13:12:22] README.md file found
+[13:12:22] Error during C:\Angular\split-window220225\CHANGELOG read
+[13:12:22] Continuing without CHANGELOG.md file
+[13:12:22] Error during C:\Angular\split-window220225\CONTRIBUTING read
+[13:12:22] Continuing without CONTRIBUTING.md file
+[13:12:22] Error during C:\Angular\split-window220225\LICENSE read
+[13:12:22] Continuing without LICENSE.md file
+[13:12:22] Error during C:\Angular\split-window220225\TODO read
+[13:12:22] Continuing without TODO.md file
+[13:12:22] Get dependencies data
+[13:12:26] parsing        : C:/Angular/split-window220225/src/main.ts
+[13:12:26] parsing        : C:/Angular/split-window220225/src/polyfills.ts
+[13:12:26] parsing        : C:/Angular/split-window220225/src/test-setup.ts
+[13:12:26] parsing        : C:/Angular/split-window220225/src/test.ts
+[13:12:26] found          : require
+[13:12:26] found          : context
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/app.component.ts
+[13:12:26] found          : AppComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/app.module.ts
+[13:12:26] found          : AppModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- BrowserModule
+[13:12:26]                : 	- HttpClientModule
+[13:12:26]                : 	- CarouselModule
+[13:12:26]                : 	- BrowserAnimationsModule
+[13:12:26]                : 	- AngularMaterialsModule
+[13:12:26]                : 	- HomeModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : 	- NgxsSelectSnapshotModule
+[13:12:26]                : - exports:
+[13:12:26]                : 	- SpinnerComponent
+[13:12:26]                : - declarations:
+[13:12:26]                : 	- AppComponent
+[13:12:26]                : 	- SpinnerComponent
+[13:12:26]                : - providers:
+[13:12:26]                : 	- SpinnerInterceptorService
+[13:12:26]                : - bootstrap:
+[13:12:26]                : 	- AppComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/app.worker.ts
+[13:12:26] parsing        : C:/Angular/split-window220225/src/environments/environment.prod.ts
+[13:12:26] found          : environment
+[13:12:26] parsing        : C:/Angular/split-window220225/src/environments/environment.ts
+[13:12:26] found          : environment
+[13:12:26] parsing        : C:/Angular/split-window220225/src/shared/angular-materials.module.ts
+[13:12:26] found          : materials
+[13:12:26] found          : AngularMaterialsModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- CommonModule
+[13:12:26]                : 	- materials
+[13:12:26]                : - exports:
+[13:12:26]                : 	- materials
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/Button.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Primary
+[13:12:26] found          : Secondary
+[13:12:26] found          : Large
+[13:12:26] found          : Small
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/header.component.ts
+[13:12:26] found          : HeaderComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/Header.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : LoggedIn
+[13:12:26] found          : LoggedOut
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/page.component.ts
+[13:12:26] found          : PageComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/button.component.ts
+[13:12:26] found          : ButtonComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/Page.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : LoggedOut
+[13:12:26] found          : LoggedIn
+[13:12:26] parsing        : C:/Angular/split-window220225/src/stories/User.ts
+[13:12:26] found          : User
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/utils/axiosComm.ts
+[13:12:26] found          : axiosCommData
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/utils/down-scale-image.ts
+[13:12:26] found          : getImage
+[13:12:26] found          : downscaleImage
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/utils/XMLHttpComm.ts
+[13:12:26] found          : XMLHttpComm
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/services/carousel.service.ts
+[13:12:26] found          : CarouselService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/services/cashe-series.service.ts
+[13:12:26] found          : CacheSeriesService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/services/image.service.ts
+[13:12:26] found          : ImageService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/services/split.service.ts
+[13:12:26] found          : SplitService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/models/data.ts
+[13:12:26] found          : data
+[13:12:26] found          : ImageModel
+[13:12:26] found          : SeriesModel
+[13:12:26] parsing        : C:/Angular/split-window220225/src/assets/workers/additional-loading.worker.ts
+[13:12:26] found          : LoadingWorker
+[13:12:26] parsing        : C:/Angular/split-window220225/src/assets/workers/carousel.worker.ts
+[13:12:26] found          : _stop
+[13:12:26] found          : cachedInstance
+[13:12:26] found          : getCarouselImage
+[13:12:26] found          : sleep
+[13:12:26] found          : checkIfImageCached
+[13:12:26] parsing        : C:/Angular/split-window220225/src/assets/workers/series.worker.ts
+[13:12:26] found          : SeriesWorker
+[13:12:26] parsing        : C:/Angular/split-window220225/src/state/status/status.actions.ts
+[13:12:26] found          : SelectedGridTemplate
+[13:12:26] found          : StatusAction
+[13:12:26] found          : SetIsImageLoaded
+[13:12:26] found          : SetIsSeriesLoaded
+[13:12:26] found          : SetImageUrls
+[13:12:26] found          : SetSeriesUrls
+[13:12:26] found          : SetCurrentCategory
+[13:12:26] found          : SetCategoryList
+[13:12:26] found          : SetFocusedSplit
+[13:12:26] found          : SetSelectedImageById
+[13:12:26] found          : SetSelectedImageByUrl
+[13:12:26] found          : SetSplitMode
+[13:12:26] found          : SetSplitCategory
+[13:12:26] found          : SetSplitAction
+[13:12:26] found          : SetSelectedSeriesById
+[13:12:26] found          : SetSelectedSplitWindowId
+[13:12:26] found          : SetWebworkerWorkingStatus
+[13:12:26] found          : SetCurrentSplitOperation
+[13:12:26] found          : SetActiveSplit
+[13:12:26] parsing        : C:/Angular/split-window220225/src/state/status/status.state.ts
+[13:12:26] found          : ISelectedGridTemplate
+[13:12:26] found          : StatusStateModel
+[13:12:26] found          : StatusState
+[13:12:26] parsing        : C:/Angular/split-window220225/storybook-static/assets/workers/additional-loading.worker.ts
+[13:12:26] found          : LoadingWorker
+[13:12:26] parsing        : C:/Angular/split-window220225/storybook-static/assets/workers/carousel.worker.ts
+[13:12:26] found          : _stop
+[13:12:26] found          : cachedInstance
+[13:12:26] found          : getCarouselImage
+[13:12:26] found          : sleep
+[13:12:26] found          : checkIfImageCached
+[13:12:26] parsing        : C:/Angular/split-window220225/storybook-static/assets/workers/series.worker.ts
+[13:12:26] found          : SeriesWorker
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/carousel/carousel.module.ts
+[13:12:26] found          : CarouselModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- CommonModule
+[13:12:26]                : 	- HttpClientModule
+[13:12:26]                : 	- AngularMaterialsModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : 	- NgxsSelectSnapshotModule
+[13:12:26]                : - exports:
+[13:12:26]                : 	- CarouselMainComponent
+[13:12:26]                : 	- CarouselMainDisplayComponent
+[13:12:26]                : - declarations:
+[13:12:26]                : 	- CarouselMainComponent
+[13:12:26]                : 	- CarouselMainDisplayComponent
+[13:12:26]                : - providers:
+[13:12:26]                : 	- CarouselService
+[13:12:26]                : 	- HttpClient
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/grid.module.ts
+[13:12:26] found          : GridModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- CommonModule
+[13:12:26]                : 	- BrowserAnimationsModule
+[13:12:26]                : 	- BrowserModule
+[13:12:26]                : 	- AngularMaterialsModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : 	- CarouselModule
+[13:12:26]                : - exports:
+[13:12:26]                : 	- GridTemplateDirective
+[13:12:26]                : 	- GridTemplateComponent
+[13:12:26]                : 	- SelectColorDirective
+[13:12:26]                : 	- DisplayGridComponent
+[13:12:26]                : 	- DisplayGridTemplateComponent
+[13:12:26]                : 	- GridMenuComponent
+[13:12:26]                : 	- ToolbarComponent
+[13:12:26]                : - declarations:
+[13:12:26]                : 	- GridTemplateDirective
+[13:12:26]                : 	- GridTemplateComponent
+[13:12:26]                : 	- SelectColorDirective
+[13:12:26]                : 	- DisplayGridComponent
+[13:12:26]                : 	- DisplayGridTemplateComponent
+[13:12:26]                : 	- GridMenuComponent
+[13:12:26]                : 	- ToolbarComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/home/home.component.ts
+[13:12:26] found          : HomeComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/home/home.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Default
+[13:12:26] found          : WithThumbnailList
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/home/home.module.ts
+[13:12:26] found          : HomeModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- CommonModule
+[13:12:26]                : 	- GridModule
+[13:12:26]                : 	- ThumbnailModule
+[13:12:26]                : 	- SeriesModule
+[13:12:26]                : - exports:
+[13:12:26]                : 	- HomeComponent
+[13:12:26]                : 	- GridModule
+[13:12:26]                : - declarations:
+[13:12:26]                : 	- HomeComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/thumbnail/thumbnail.module.ts
+[13:12:26] found          : ThumbnailModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- CommonModule
+[13:12:26]                : 	- AngularMaterialsModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : 	- NgxsModule
+[13:12:26]                : - exports:
+[13:12:26]                : 	- ThumbnailItemComponent
+[13:12:26]                : 	- ThumbnailListComponent
+[13:12:26]                : 	- SelectThumbnailComponent
+[13:12:26]                : - declarations:
+[13:12:26]                : 	- ThumbnailItemComponent
+[13:12:26]                : 	- ThumbnailListComponent
+[13:12:26]                : 	- SelectThumbnailComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/series/series-item.service.ts
+[13:12:26] found          : SeriesItemService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/series/series.module.ts
+[13:12:26] found          : SeriesModule
+[13:12:26]                : - imports:
+[13:12:26]                : 	- CommonModule
+[13:12:26]                : 	- AngularMaterialsModule
+[13:12:26]                : - exports:
+[13:12:26]                : 	- SeriesListComponent
+[13:12:26]                : 	- SeriesItemComponent
+[13:12:26]                : - declarations:
+[13:12:26]                : 	- SeriesListComponent
+[13:12:26]                : 	- SeriesItemComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/utils/spinner/spinner-interceptor.service.ts
+[13:12:26] found          : SpinnerInterceptorService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/utils/spinner/spinner-handler.service.ts
+[13:12:26] found          : SpinnerHandlerService
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/utils/spinner/spinner.component.ts
+[13:12:26] found          : SpinnerComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/carousel/carousel-main/carousel-main.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Primary
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/carousel/carousel-main/carousel-main.component.ts
+[13:12:26] found          : CarouselMainComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/display-grid/display-grid-template.component.ts
+[13:12:26] found          : DisplayGridTemplateComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/display-grid/display-grid.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : DefaultMode
+[13:12:26] found          : SplitMode_2
+[13:12:26] found          : SplitMode_3
+[13:12:26] found          : SplitMode_4
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/display-grid/display-grid.component.ts
+[13:12:26] found          : Tile
+[13:12:26] found          : DisplayGridComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/display-grid/display-grid-template.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : DisplayGridTemplate
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/grid-directives/grid-template.directive.ts
+[13:12:26] found          : GridTemplateDirective
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/grid-directives/select-color.directive.ts
+[13:12:26] found          : SelectColorDirective
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/grid-menu/grid-menu.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : DefaultMode
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/grid-menu/grid-menu.component.ts
+[13:12:26] found          : GridMenuComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/toolbar/toolbar.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : ToolbarMode
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/toolbar/toolbar.component.ts
+[13:12:26] found          : ToolbarComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/grid/grid-template/grid-template.component.ts
+[13:12:26] found          : GridTemplateComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/thumbnail/select-thumbnail/select-thumbnail.component.ts
+[13:12:26] found          : SelectThumbnailComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Default
+[13:12:26] found          : initial_value
+[13:12:26] found          : initialize
+[13:12:26] found          : SelectedItem
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.ts
+[13:12:26] found          : ThumbnailItemComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Default
+[13:12:26] found          : images
+[13:12:26] found          : ThumbnailList
+[13:12:26] found          : initial_value
+[13:12:26] found          : initialize
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.ts
+[13:12:26] found          : CustomVirtualScrollStrategy
+[13:12:26] found          : ThumbnailListComponent
+[13:12:26]                : - providers:
+[13:12:26]                : 	- { provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/series/seires-list/series-list.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Default
+[13:12:26] found          : SeriesList
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/series/seires-list/series-list.component.ts
+[13:12:26] found          : SeriesListComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/series/series-item/series-item.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Default
+[13:12:26] found          : initial_value
+[13:12:26] found          : initialize
+[13:12:26] found          : SelectedSeries
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/series/series-item/series-item.component.ts
+[13:12:26] found          : SeriesItemComponent
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/carousel/carousel-main/carousel-main-display/carousel-main-display.component.stories.ts
+[13:12:26] found          : Template
+[13:12:26] found          : Default
+[13:12:26] parsing        : C:/Angular/split-window220225/src/app/components/carousel/carousel-main/carousel-main-display/carousel-main-display.component.ts
+[13:12:26] found          : CarouselMainDisplayComponent
+[13:12:26] -------------------
+[13:12:26] Project statistics 
+[13:12:26] - files      : 260
+[13:12:26] - module     : 7
+[13:12:26] - component  : 18
+[13:12:26] - directive  : 2
+[13:12:26] - injectable : 8
+[13:12:26] - injector   : 1
+[13:12:26] - class      : 23
+[13:12:26] - interface  : 6
+[13:12:26] -------------------
+[13:12:26] Prepare components
+[13:12:26]  AppComponent has a templateUrl, include it
+[13:12:26]  AppComponent has styleUrls, include them
+[13:12:26]  ButtonComponent has styleUrls, include them
+[13:12:26]  GridMenuComponent has styles, include them
+[13:12:26]  GridTemplateComponent has styles, include them
+[13:12:26]  HeaderComponent has styleUrls, include them
+[13:12:26]  PageComponent has styleUrls, include them
+[13:12:26]  SeriesItemComponent has styles, include them
+[13:12:26]  SeriesListComponent has styles, include them
+[13:12:26]  SpinnerComponent has styles, include them
+[13:12:26]  ThumbnailItemComponent has styles, include them
+[13:12:26]  ThumbnailListComponent has styles, include them
+[13:12:26]  ToolbarComponent has styles, include them
+[13:12:26] Prepare modules
+[13:12:26] Prepare directives
+[13:12:26] Prepare injectables
+[13:12:26] Prepare interceptors
+[13:12:26] Prepare classes
+[13:12:26] Prepare interfaces
+[13:12:26] Prepare miscellaneous
+[13:12:26] Process documentation coverage report
+[13:12:26] Generating documentation in export format json
+[13:12:26] Documentation generated in ./ in 3.973 seconds
 info @storybook/angular v6.4.19
 info 
-info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--11008-YTv0eQZiejy2
+info => Cleaning outputDir: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--14992-nZpLO4qWv82s
 info => Loading presets
 info => Compiling manager..
 info => Compiling preview..
 info => Found custom tsconfig.json
-Compiling @angular/animations : fesm2015 as esm2015
-Compiling @angular/core : fesm2015 as esm2015
-Compiling @angular/animations/browser : fesm2015 as esm2015
-Compiling @angular/animations/browser/testing : fesm2015 as esm2015
-Compiling @angular/common : fesm2015 as esm2015
-Compiling @angular/common/http : fesm2015 as esm2015
-Compiling @angular/common/http/testing : fesm2015 as esm2015
-Compiling @angular/forms : fesm2015 as esm2015
-Compiling @angular/platform-browser : fesm2015 as esm2015
-Compiling @angular/platform-browser/animations : fesm2015 as esm2015
-Compiling @angular/core/testing : fesm2015 as esm2015
-Compiling @angular/platform-browser-dynamic : fesm2015 as esm2015
-Compiling @angular/platform-browser/testing : fesm2015 as esm2015
-Compiling @angular/compiler/testing : fesm2015 as esm2015
-Compiling @angular/platform-browser-dynamic/testing : fesm2015 as esm2015
-Compiling @angular/common/testing : fesm2015 as esm2015
-Compiling @angular/router : fesm2015 as esm2015
-Compiling @angular/router/testing : fesm2015 as esm2015
 info => Using implicit CSS loaders
 info => Loading angular-cli config for angular lower than 12.2.0
 info => Using angular project "split-window220225:build" for configuring Storybook
@@ -250,6 +721,7 @@ Starting type checking service...
 <s> [webpack.Progress] 9% setup compilation EntryPlugin
 <s> [webpack.Progress] 9% setup compilation EntryPlugin
 <s> [webpack.Progress] 9% setup compilation EntryPlugin
+<s> [webpack.Progress] 9% setup compilation EntryPlugin
 <s> [webpack.Progress] 9% setup compilation RuntimePlugin
 <s> [webpack.Progress] 9% setup compilation InferAsyncModulesPlugin
 <s> [webpack.Progress] 9% setup compilation DataUriPlugin
@@ -303,47 +775,51 @@ Starting type checking service...
 <s> [webpack.Progress] 10% building
 <s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/babel-loader/lib/index.js
-<s> [webpack.Progress] 10% building 0/17 entries 3/17 dependencies 0/3 modules
+<s> [webpack.Progress] 10% building 0/18 entries 3/18 dependencies 0/3 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/style-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/postcss-loader/dist/cjs.js
-<s> [webpack.Progress] 10% building 0/17 entries 4/17 dependencies 0/4 modules
-<s> [webpack.Progress] 10% building 0/17 entries 19/61 dependencies 0/18 modules
-<s> [webpack.Progress] 10% building 0/17 entries 163/197 dependencies 11/94 modules
+<s> [webpack.Progress] 10% building 0/18 entries 4/18 dependencies 0/4 modules
+<s> [webpack.Progress] 10% building 0/18 entries 21/69 dependencies 0/20 modules
+<s> [webpack.Progress] 10% building 0/18 entries 100/212 dependencies 10/73 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/@mdx-js/loader/index.js
-<s> [webpack.Progress] 10% building 0/17 entries 443/496 dependencies 12/221 modules
-<s> [webpack.Progress] 10% building 0/17 entries 700/926 dependencies 17/277 modules
-<s> [webpack.Progress] 13% building 1/17 entries 707/926 dependencies 26/277 modules
-<s> [webpack.Progress] 16% building 2/17 entries 707/926 dependencies 26/277 modules
-<s> [webpack.Progress] 16% building import loader ./node_modules/ts-loader/index.js
-<s> [webpack.Progress] 16% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
-<s> [webpack.Progress] 16% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
-<s> [webpack.Progress] 16% building 2/17 entries 850/926 dependencies 43/289 modules
+<s> [webpack.Progress] 10% building 0/18 entries 477/534 dependencies 12/245 modules
+<s> [webpack.Progress] 10% building import loader ./node_modules/ts-loader/index.js
+<s> [webpack.Progress] 10% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
+<s> [webpack.Progress] 10% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
+<s> [webpack.Progress] 10% building 0/18 entries 487/534 dependencies 12/249 modules
+<s> [webpack.Progress] 10% building 0/18 entries 530/817 dependencies 16/265 modules
+<s> [webpack.Progress] 13% building 1/18 entries 747/872 dependencies 21/291 modules
 [BABEL] Note: The code generator has deoptimised the styling of C:\Angular\split-window220225\node_modules\prettier\standalone.js as it exceeds the max of 500KB.
-<s> [webpack.Progress] 16% building 2/17 entries 1068/1100 dependencies 66/344 modules
-<s> [webpack.Progress] 16% building 2/17 entries 1596/1700 dependencies 211/470 modules
-<s> [webpack.Progress] 16% building 2/17 entries 2200/2509 dependencies 286/578 modules
-<s> [webpack.Progress] 16% building 2/17 entries 2871/3100 dependencies 380/797 modules
-<s> [webpack.Progress] 16% building 2/17 entries 3571/3600 dependencies 597/877 modules
-<s> [webpack.Progress] 17% building 2/17 entries 3800/3871 dependencies 647/935 modules
-<s> [webpack.Progress] 18% building 2/17 entries 4126/4200 dependencies 736/1065 modules
-<s> [webpack.Progress] 20% building 2/17 entries 4900/4987 dependencies 973/1254 modules
-<s> [webpack.Progress] 22% building 3/17 entries 5214/5260 dependencies 1176/1357 modules
-<s> [webpack.Progress] 22% building 4/17 entries 5214/5260 dependencies 1177/1357 modules
-<s> [webpack.Progress] 26% building 5/17 entries 5214/5260 dependencies 1178/1357 modules
-<s> [webpack.Progress] 29% building 6/17 entries 5214/5260 dependencies 1179/1357 modules
-<s> [webpack.Progress] 32% building 7/17 entries 5214/5260 dependencies 1180/1357 modules
-<s> [webpack.Progress] 35% building 8/17 entries 5214/5260 dependencies 1181/1357 modules
-<s> [webpack.Progress] 39% building 9/17 entries 5214/5260 dependencies 1182/1357 modules
-<s> [webpack.Progress] 42% building 10/17 entries 5214/5260 dependencies 1183/1357 modules
-<s> [webpack.Progress] 45% building 11/17 entries 5214/5260 dependencies 1184/1357 modules
-<s> [webpack.Progress] 48% building 12/17 entries 5214/5260 dependencies 1185/1357 modules
-<s> [webpack.Progress] 52% building 13/17 entries 5214/5260 dependencies 1186/1357 modules
-<s> [webpack.Progress] 52% building 13/17 entries 5867/5900 dependencies 1536/1633 modules
-<s> [webpack.Progress] 55% building 14/17 entries 6128/6139 dependencies 1641/1675 modules
-<s> [webpack.Progress] 58% building 15/17 entries 6148/6148 dependencies 1667/1681 modules
-<s> [webpack.Progress] 61% building 16/17 entries 6160/6160 dependencies 1687/1688 modules
-<s> [webpack.Progress] 65% building 17/17 entries 6160/6160 dependencies 1688/1688 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1100/1134 dependencies 53/385 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1363/1500 dependencies 113/410 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1700/1940 dependencies 138/519 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2065/2408 dependencies 205/701 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2854/2897 dependencies 295/800 modules
+<s> [webpack.Progress] 16% building 2/18 entries 3359/3500 dependencies 345/878 modules
+<s> [webpack.Progress] 16% building 2/18 entries 3800/3857 dependencies 431/930 modules
+<s> [webpack.Progress] 16% building 2/18 entries 4123/4243 dependencies 500/950 modules
+<s> [webpack.Progress] 18% building 2/18 entries 4517/4600 dependencies 736/1054 modules
+<s> [webpack.Progress] 19% building 2/18 entries 5145/5300 dependencies 857/1270 modules
+<s> [webpack.Progress] 22% building 2/18 entries 5746/5800 dependencies 1112/1421 modules
+<s> [webpack.Progress] 24% building 3/18 entries 6071/6205 dependencies 1291/1566 modules
+<s> [webpack.Progress] 24% building 4/18 entries 6071/6205 dependencies 1292/1566 modules
+<s> [webpack.Progress] 25% building 5/18 entries 6071/6205 dependencies 1293/1566 modules
+<s> [webpack.Progress] 28% building 6/18 entries 6071/6205 dependencies 1294/1566 modules
+<s> [webpack.Progress] 31% building 7/18 entries 6071/6205 dependencies 1295/1566 modules
+<s> [webpack.Progress] 34% building 8/18 entries 6071/6205 dependencies 1296/1566 modules
+<s> [webpack.Progress] 37% building 9/18 entries 6071/6205 dependencies 1297/1566 modules
+<s> [webpack.Progress] 40% building 10/18 entries 6071/6205 dependencies 1298/1566 modules
+<s> [webpack.Progress] 43% building 11/18 entries 6071/6205 dependencies 1299/1566 modules
+<s> [webpack.Progress] 46% building 12/18 entries 6071/6205 dependencies 1300/1566 modules
+<s> [webpack.Progress] 49% building 13/18 entries 6071/6205 dependencies 1301/1566 modules
+<s> [webpack.Progress] 52% building 14/18 entries 6438/6499 dependencies 1596/1712 modules
+<s> [webpack.Progress] 52% building 14/18 entries 6548/6600 dependencies 1613/1727 modules
+<s> [webpack.Progress] 52% building 14/18 entries 6777/6800 dependencies 1649/1775 modules
+<s> [webpack.Progress] 55% building 15/18 entries 6953/6958 dependencies 1776/1806 modules
+<s> [webpack.Progress] 58% building 16/18 entries 6989/6989 dependencies 1801/1821 modules
+<s> [webpack.Progress] 61% building 17/18 entries 6991/6991 dependencies 1821/1822 modules
+<s> [webpack.Progress] 64% building 18/18 entries 6991/6991 dependencies 1822/1822 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
 <s> [webpack.Progress] 69% building finish
@@ -443,13 +919,13 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing copy-webpack-plugin
 <s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
 <s> [webpack.Progress] 92% sealing asset processing TerserPlugin
-info => Manager built (38 s)
+info => Manager built (37 s)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.85f4401b.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.85f4401b.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.1aae66a6.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.1aae66a6.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.6b575140.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.6b575140.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.d6f9ef91.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.d6f9ef91.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 701.d7d869d7.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 701.d7d869d7.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 39.174611b3.iframe.bundle.js generate SourceMap
@@ -466,10 +942,20 @@ info => Manager built (38 s)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 459.e56a0840.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.99cb903f.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.99cb903f.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 613.8f3c3087.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 613.8f3c3087.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 402.3cefd06b.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 402.3cefd06b.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 341.9a198a31.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 341.9a198a31.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 411.823c1081.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 411.823c1081.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.dffbcc98.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.dffbcc98.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 784.5bb844f3.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 784.5bb844f3.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 669.15edc26e.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 669.15edc26e.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 641.2691d56c.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 641.2691d56c.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
@@ -478,10 +964,10 @@ info => Manager built (38 s)
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.7b750d91.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.7b750d91.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.7fabbdb2.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.7fabbdb2.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.876db7eb.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.876db7eb.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.391e0d32.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.391e0d32.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 701.f02ff712.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 701.f02ff712.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 574.356712c0.iframe.bundle.js generate SourceMap
@@ -490,6 +976,14 @@ info => Manager built (38 s)
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 881.9d208e2f.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 459.c18f2256.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 459.c18f2256.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 613.7c4fcca9.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 613.7c4fcca9.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 402.1f8018bc.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 402.1f8018bc.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 341.3c42f53d.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 341.3c42f53d.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 669.3d1568d6.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 669.3d1568d6.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 39.5e67c080.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 39.5e67c080.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 236.e33a8f55.iframe.bundle.js generate SourceMap
@@ -498,10 +992,12 @@ info => Manager built (38 s)
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 308.45640eb3.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 331.a382e60d.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 331.a382e60d.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 411.9da8e2cf.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 411.9da8e2cf.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.d2b3f4d1.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.d2b3f4d1.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 784.e3a8870a.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 784.e3a8870a.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 641.9ec938fd.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 641.9ec938fd.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin resolve sources
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing AnyComponentStyleBudgetChecker
@@ -531,25 +1027,76 @@ info => Manager built (38 s)
 <s> [webpack.Progress] 99% cache begin idle
 <s> [webpack.Progress] 100% 
 
-info => Preview built (43 s)
+info => Preview built (45 s)
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'StateContext' (imported as 'StateContext') was not found in '@ngxs/store' (possible exports: Action, Actions, InitState, NGXS_PLUGINS, NgxsModule, NgxsSimpleChange, NoopNgxsExecutionStrategy, Select, Selector, SelectorOptions, State, StateStream, StateToken, Store, UpdateState, actionMatcher, createSelector, ensureSelectorMetadata, ensureStoreMetadata, getActionTypeFromInstance, getSelectorMetadata, getStoreMetadata, getValue, ofAction, ofActionCanceled, ofActionCompleted, ofActionDispatched, ofActionErrored, ofActionSuccessful, setValue, ɵa, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵw, ɵx, ɵy, ɵz)
+WARN export 'User' (imported as 'User') was not found in './User' (module has no exports)
+WARN export 'User' (imported as 'User') was not found in './User' (module has no exports)
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
 WARN Assets: 
+WARN   assets/sample_images/104.jpg (2.96 MiB)
+WARN   assets/sample_images/105.jpg (2.65 MiB)
+WARN   assets/sample_images/106.jpg (3.04 MiB)
+WARN   assets/sample_images/109.jpg (2.01 MiB)
+WARN   assets/sample_images/110.jpg (2.94 MiB)
+WARN   assets/sample_images/111.jpg (2.47 MiB)
+WARN   assets/sample_images/114.jpg (3.1 MiB)
+WARN   assets/sample_images/116.png (2.47 MiB)
+WARN   assets/md/images/split-structure.png (1.12 MiB)
+WARN   main.876db7eb.iframe.bundle.js (665 KiB)
 WARN   236.e33a8f55.iframe.bundle.js (595 KiB)
-WARN   784.e3a8870a.iframe.bundle.js (3.76 MiB)
+WARN   641.9ec938fd.iframe.bundle.js (4.59 MiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
-WARN   main (3.86 MiB)
-WARN       runtime~main.7fabbdb2.iframe.bundle.js
-WARN       784.e3a8870a.iframe.bundle.js
-WARN       main.7b750d91.iframe.bundle.js
+WARN   main (5.29 MiB)
+WARN       runtime~main.391e0d32.iframe.bundle.js
+WARN       411.9da8e2cf.iframe.bundle.js
+WARN       641.9ec938fd.iframe.bundle.js
+WARN       main.876db7eb.iframe.bundle.js
 WARN 
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--11008-YTv0eQZiejy2
+info => Output directory: C:\\Users\\WILLIA~1\\AppData\\Local\\Temp\\chromatic--14992-nZpLO4qWv82s

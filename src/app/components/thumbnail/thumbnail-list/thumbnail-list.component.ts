@@ -18,7 +18,7 @@ import {StatusState} from "../../../../state/status/status.state";
 
 import {Observable, Subject} from "rxjs";
 import {ImageModel} from "../../../models/data";
-import {takeUntil} from "rxjs/operators";
+import {take, takeUntil} from "rxjs/operators";
 @Injectable()
 export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
   constructor() {
@@ -62,7 +62,7 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
   changeDetection: ChangeDetectionStrategy.OnPush
 
 })
-export class ThumbnailListComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ThumbnailListComponent implements OnInit, AfterViewInit {
   @Input() set selectedImage (v: any){
     if( v ) {
       v && this.onSelectItem(v.item);
@@ -78,8 +78,6 @@ export class ThumbnailListComponent implements OnInit, AfterViewInit, OnDestroy 
   @ViewChild(CdkVirtualScrollViewport, { static: true }) viewPort: CdkVirtualScrollViewport | undefined;
   @Select(StatusState.getSelectedImageById)  getSelectedImageById$: Observable<ImageModel>;
   _currentImages: any;
-  unsubscribe = new Subject();
-  unsubscribe$ = this.unsubscribe.asObservable();
   addClass: {} = {};
   draggedInx = 0;
   idx = 0;
@@ -104,7 +102,8 @@ export class ThumbnailListComponent implements OnInit, AfterViewInit, OnDestroy 
      *      carousel.service (getPrevImage, getNextImage)
      */
     this.getSelectedImageById$.pipe(
-      takeUntil(this.unsubscribe$)
+      // takeUntil(this.unsubscribe$)
+      take(1)
     ).subscribe( (image: any) => {
 
       // To synchronize with the current selected item, after when it is activated by clicking item-list
@@ -148,9 +147,5 @@ export class ThumbnailListComponent implements OnInit, AfterViewInit, OnDestroy 
       }
       this.cdr.detectChanges();
     },200);
-  }
-  ngOnDestroy() {
-    this.unsubscribe.next({});
-    this.unsubscribe.complete();
   }
 }
