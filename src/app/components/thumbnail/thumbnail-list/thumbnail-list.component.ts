@@ -146,6 +146,6 @@ export class ThumbnailListComponent implements OnInit, AfterViewInit {
         index: ev.imageId
       }
       this.cdr.detectChanges();
-    },200);
+    },300);
   }
 }
