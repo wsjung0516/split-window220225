@@ -131,9 +131,9 @@ export class ThumbnailListComponent implements OnInit, AfterViewInit {
   }
 
   onSelectItem(ev:ImageModel) {
+    // console.log( '--- thumbnail-list id', ev )
     if( !ev) return;
 
-    // console.log( '--- thumbnail-list id', ev )
     localStorage.setItem('selectedImageId', JSON.stringify({item:ev}));
     this.selectItem.emit(ev); // send to home.component
     /**
