@@ -65,7 +65,7 @@ export class ThumbnailItemComponent implements OnInit, AfterViewInit {
     // @ts-ignore
     // console.log(' thumbnail-item -- category',this._originalImage.category)
     this.image.nativeElement.src = this._originalImage.blob;
-    this.cdr.markForCheck();
+    // this.cdr.markForCheck();
   }
   ngOnChanges(changes: SimpleChanges) {
     this.borderColor = 'none_selected_item'

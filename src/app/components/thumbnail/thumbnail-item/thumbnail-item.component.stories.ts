@@ -66,6 +66,6 @@ SelectedItem.args = {
   },
   addClass: 'aa'
 }
-SelectedItem.play = async () => {
+Default.play = async () => {
   await initialize();
 }

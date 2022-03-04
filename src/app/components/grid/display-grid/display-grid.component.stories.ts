@@ -18,12 +18,12 @@ export default {
 const Template: Story<DisplayGridComponent> = (args: DisplayGridComponent) => ({
   props: {
     ...args,
-    onSelectedTemplate: action('onSelectTemplate')
+    onSelectedTemplate: action('selectTpl')
   },
   template: `
     <div class="text-red-600">Display Grid</div>
     <display-grid [splitMode]="splitMode"
-        (onSelectTemplate)="onSelectedTemplate($event)">
+        (selectTpl)="onSelectedTemplate($event)">
     </display-grid>
     `
 });

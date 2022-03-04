@@ -55,9 +55,6 @@ export class SeriesItemComponent implements  AfterViewInit, OnChanges {
     // console.log(' ---- series_item ngAfterViewInit is called', this.selectedSeriesId.category, this._seriesImage.category);
     this.image.nativeElement.src = this._seriesImage.blob;
   }
-  onSelectedSeris(ev: any) {
-    this.selected.emit(ev);
-  }
   ngOnChanges(changes: SimpleChanges) {
     this.borderColor = 'none_selected_item'
     this.cdr.detectChanges();

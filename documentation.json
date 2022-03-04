@@ -928,7 +928,7 @@
         },
         {
             "name": "CustomVirtualScrollStrategy",
-            "id": "injectable-CustomVirtualScrollStrategy-47828955ba32e5d4bd1e9cc616ca176ef84088978c48d9740dd87315eb84adf93a40209cce2aaf25da755b4f66572fe11427032aa76ee94ae6b8870b28d383e2",
+            "id": "injectable-CustomVirtualScrollStrategy-0c4141b5b7b90f317f3530bd3c011987d723406bbf15cbef7be205f2e5d83ec875c2562cfd0ce230c790e2ac9cae18df27f62da7ffca238309afc064961d690d",
             "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.ts",
             "properties": [],
             "methods": [],
@@ -936,7 +936,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  ChangeDetectorRef,\n  Component, EventEmitter,\n  Injectable,\n  Input, OnDestroy,\n  OnInit, Output,\n  ViewChild\n} from '@angular/core';\nimport {\n  CdkVirtualScrollViewport,\n  FixedSizeVirtualScrollStrategy,\n  VIRTUAL_SCROLL_STRATEGY\n} from \"@angular/cdk/scrolling\";\nimport {Select} from \"@ngxs/store\";\nimport {StatusState} from \"../../../../state/status/status.state\";\n\nimport {Observable, Subject} from \"rxjs\";\nimport {ImageModel} from \"../../../models/data\";\nimport {take, takeUntil} from \"rxjs/operators\";\n@Injectable()\nexport class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {\n  constructor() {\n    /** Below value is assumed, that could contain at most 100 image pixel data at one time.\n     * If less than this value, the image data tend to be shuffled by sharing memory usage while scrolling  */\n    super(90, 10000, 10000); // (itemSize, minBufferPx, maxBufferPx)\n  }\n}\n\n@Component({\n  selector: 'thumbnail-list',\n  template: `\n    <div class=\"mt-1\">\n      <div class=\"cdk-scroll-source\" style=\"width: 99%\">\n        <cdk-virtual-scroll-viewport\n          class=\"cdk-scroll-viewport\"\n          orientation=\"horizontal\" >\n          <ng-container *cdkVirtualFor=\"let item of _currentImages\">\n            <thumbnail-item [originalImage]=\"item\"\n                            [addClass]=\"addClass\"\n                            (selected) = onSelectItem($event)>\n            </thumbnail-item>\n          </ng-container>\n        </cdk-virtual-scroll-viewport>\n      </div>\n    </div>  `,\n  styles: [`\n    .cdk-scroll-source {\n      writing-mode: vertical-lr;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport {\n      height: 90px;\n      width: 100%;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport .cdk-virtual-scroll-content-wrapper {\n      display: flex;\n      flex-direction: row;\n    }\n  `],\n  providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}],\n  changeDetection: ChangeDetectionStrategy.OnPush\n\n})\nexport class ThumbnailListComponent implements OnInit, AfterViewInit {\n  @Input() set selectedImage (v: any){\n    if( v ) {\n      v && this.onSelectItem(v.item);\n      this.cdr.markForCheck();\n    }\n  };\n  @Input() set currentImages (im:  any) {\n    // console.log(' currentImages', im)\n    this._currentImages = im;\n    this.cdr.markForCheck();\n  }\n  @Output() selectItem = new EventEmitter<any>();\n  @ViewChild(CdkVirtualScrollViewport, { static: true }) viewPort: CdkVirtualScrollViewport | undefined;\n  @Select(StatusState.getSelectedImageById)  getSelectedImageById$: Observable<ImageModel>;\n  _currentImages: any;\n  addClass: {} = {};\n  draggedInx = 0;\n  idx = 0;\n\n  constructor(\n    private cdr: ChangeDetectorRef,\n  ) { }\n\n  ngOnInit(): void {\n    const initial_value = {\n      item: {\n        imageId: 1,\n        category: 'animal',\n        url: '',\n        blob: '',\n        title: ''\n      }\n    }\n    localStorage.setItem('selectedImageId', JSON.stringify(initial_value));\n    /**\n     * Triggered from series-list.component ( onSelectSeries),\n     *      carousel.service (getPrevImage, getNextImage)\n     */\n    this.getSelectedImageById$.pipe(\n      // takeUntil(this.unsubscribe$)\n      take(1)\n    ).subscribe( (image: any) => {\n\n      // To synchronize with the current selected item, after when it is activated by clicking item-list\n      localStorage.setItem('selectedImageId', JSON.stringify({item: image}));\n      setTimeout(() => {\n      // console.log(' data1 -', image.imageId)\n        this.viewPort.scrollToIndex(image.imageId, 'smooth')\n        this.addClass = {\n          class:'selected_item',\n          imageId: image.imageId\n        }\n      this.cdr.markForCheck();\n      },200);\n    })\n    ///\n  }\n  ngAfterViewInit() {\n    // Because of not focused with red border even though clicking item just after staring.\n    setTimeout(()=> {\n      this.addClass = {\n        class: 'selected_item',\n        index: 1\n      }\n    })\n  }\n\n  onSelectItem(ev:ImageModel) {\n    console.log( '--- thumbnail-list id', ev )\n    if( !ev) return;\n\n    localStorage.setItem('selectedImageId', JSON.stringify({item:ev}));\n    this.selectItem.emit(ev); // send to home.component\n    /**\n     * To synchronize with the current selected item, after when it is activated by clicking item-list\n     * */\n    setTimeout(() => {\n      this.viewPort?.scrollToIndex(ev.imageId, 'smooth')\n      this.addClass = {\n        class: 'selected_item',\n        index: ev.imageId\n      }\n      this.cdr.detectChanges();\n    },300);\n  }\n}\n",
+            "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  ChangeDetectorRef,\n  Component, EventEmitter,\n  Injectable,\n  Input, OnDestroy,\n  OnInit, Output,\n  ViewChild\n} from '@angular/core';\nimport {\n  CdkVirtualScrollViewport,\n  FixedSizeVirtualScrollStrategy,\n  VIRTUAL_SCROLL_STRATEGY\n} from \"@angular/cdk/scrolling\";\nimport {Select} from \"@ngxs/store\";\nimport {StatusState} from \"../../../../state/status/status.state\";\n\nimport {Observable, Subject} from \"rxjs\";\nimport {ImageModel} from \"../../../models/data\";\nimport {take, takeUntil} from \"rxjs/operators\";\n@Injectable()\nexport class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {\n  constructor() {\n    /** Below value is assumed, that could contain at most 100 image pixel data at one time.\n     * If less than this value, the image data tend to be shuffled by sharing memory usage while scrolling  */\n    super(90, 10000, 10000); // (itemSize, minBufferPx, maxBufferPx)\n  }\n}\n\n@Component({\n  selector: 'thumbnail-list',\n  template: `\n    <div class=\"mt-1\">\n      <div class=\"cdk-scroll-source\" style=\"width: 99%\">\n        <cdk-virtual-scroll-viewport\n          class=\"cdk-scroll-viewport\"\n          orientation=\"horizontal\" >\n          <ng-container *cdkVirtualFor=\"let item of _currentImages\">\n            <thumbnail-item [originalImage]=\"item\"\n                            [addClass]=\"addClass\"\n                            (selected) = onSelectItem($event)>\n            </thumbnail-item>\n          </ng-container>\n        </cdk-virtual-scroll-viewport>\n      </div>\n    </div>  `,\n  styles: [`\n    .cdk-scroll-source {\n      writing-mode: vertical-lr;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport {\n      height: 90px;\n      width: 100%;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport .cdk-virtual-scroll-content-wrapper {\n      display: flex;\n      flex-direction: row;\n    }\n  `],\n  providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}],\n  changeDetection: ChangeDetectionStrategy.OnPush\n\n})\nexport class ThumbnailListComponent implements OnInit, AfterViewInit {\n  @Input() set selectedImage (v: any){\n    if( v ) {\n      v && this.onSelectItem(v.item);\n      this.cdr.markForCheck();\n    }\n  };\n  @Input() set currentImages (im:  any) {\n    // console.log(' currentImages', im)\n    this._currentImages = im;\n    this.cdr.markForCheck();\n  }\n  @Output() selectItem = new EventEmitter<any>();\n  @ViewChild(CdkVirtualScrollViewport, { static: true }) viewPort: CdkVirtualScrollViewport | undefined;\n  @Select(StatusState.getSelectedImageById)  getSelectedImageById$: Observable<ImageModel>;\n  _currentImages: any;\n  addClass: {} = {};\n  draggedInx = 0;\n  idx = 0;\n\n  constructor(\n    private cdr: ChangeDetectorRef,\n  ) { }\n\n  ngOnInit(): void {\n    const initial_value = {\n      item: {\n        imageId: 1,\n        category: 'animal',\n        url: '',\n        blob: '',\n        title: ''\n      }\n    }\n    localStorage.setItem('selectedImageId', JSON.stringify(initial_value));\n    /**\n     * Triggered from series-list.component ( onSelectSeries),\n     *      carousel.service (getPrevImage, getNextImage)\n     */\n    this.getSelectedImageById$.pipe(\n      // takeUntil(this.unsubscribe$)\n      take(1)\n    ).subscribe( (image: any) => {\n\n      // To synchronize with the current selected item, after when it is activated by clicking item-list\n      localStorage.setItem('selectedImageId', JSON.stringify({item: image}));\n      setTimeout(() => {\n      // console.log(' data1 -', image.imageId)\n        this.viewPort.scrollToIndex(image.imageId, 'smooth')\n        this.addClass = {\n          class:'selected_item',\n          imageId: image.imageId\n        }\n      this.cdr.markForCheck();\n      },200);\n    })\n    ///\n  }\n  ngAfterViewInit() {\n    // Because of not focused with red border even though clicking item just after staring.\n    setTimeout(()=> {\n      this.addClass = {\n        class: 'selected_item',\n        index: 1\n      }\n    })\n  }\n\n  onSelectItem(ev:ImageModel) {\n    // console.log( '--- thumbnail-list id', ev )\n    if( !ev) return;\n\n    localStorage.setItem('selectedImageId', JSON.stringify({item:ev}));\n    this.selectItem.emit(ev); // send to home.component\n    /**\n     * To synchronize with the current selected item, after when it is activated by clicking item-list\n     * */\n    setTimeout(() => {\n      this.viewPort?.scrollToIndex(ev.imageId, 'smooth')\n      this.addClass = {\n        class: 'selected_item',\n        index: ev.imageId\n      }\n      this.cdr.detectChanges();\n    },300);\n  }\n}\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -8207,7 +8207,7 @@
         },
         {
             "name": "SeriesItemComponent",
-            "id": "component-SeriesItemComponent-cb4b16e26671841f8c9c8c4e0563644c668ab35ca11cb148ed4970d0c19d049a4b8109a99045399a44487c0eb0bd0114dcf4902ee7d524f6df7188ae8968be9d",
+            "id": "component-SeriesItemComponent-51ed1f00e50137ab513b70227b53e1ebeb6331ec9239e2c9f4fa19f16b6fc79d19c3bbef34755ba630bd58b72514aa44ab3443bb45a62acd07e1a2211e20587b",
             "file": "src/app/components/series/series-item/series-item.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -8319,41 +8319,13 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 61,
+                    "line": 58,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "changes",
                             "type": "SimpleChanges",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "onSelectedSeris",
-                    "args": [
-                        {
-                            "name": "ev",
-                            "type": "any",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 58,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "ev",
-                            "type": "any",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -8370,7 +8342,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy, ChangeDetectorRef,\n  Component,\n  ElementRef, EventEmitter, Input,\n  OnChanges,\n  OnInit, Output,\n  SimpleChanges, ViewChild\n} from '@angular/core';\nimport {SeriesModel} from \"../../../models/data\";\n\n@Component({\n  selector: 'series-item',\n  template: `\n    <div class=\"mb-1 w-auto\">\n      <div class=\"{{borderColor}}\" (click)=\"selected.emit(_seriesImage)\">\n        <img #img>\n      </div>\n    </div>\n  `,\n  styles: [`\n    img {\n      /*width: 145px;*/\n      width: auto;\n      height:100px;\n      object-fit: fill;\n    }\n    .selected_item {\n      width: auto;\n      border: red solid 4px ;\n    }\n  `],\n   changeDetection: ChangeDetectionStrategy.OnPush}\n)\nexport class SeriesItemComponent implements  AfterViewInit, OnChanges {\n  @ViewChild('img') image?: ElementRef;\n  @Input() set seriesImage (v: any) {\n    // console.log(' series_item seriesImage',v)\n    this._seriesImage = v;\n    if( this.image) {\n      this.image.nativeElement.src = this._seriesImage.blob;\n    }\n    this.cdr.markForCheck();\n  };\n  // @Input() seriesImage: SeriesModel;\n  @Input() set addClass( v: any){\n    this.cdr.markForCheck();\n  }\n  @Output() selected: EventEmitter<any> = new EventEmitter();\n  _seriesImage: SeriesModel;\n  borderColor: any;\n  selectedSeriesId: SeriesModel | undefined;\n  constructor(private cdr: ChangeDetectorRef) { }\n  ngAfterViewInit() {\n    // console.log(' ---- series_item ngAfterViewInit is called', this.selectedSeriesId.category, this._seriesImage.category);\n    this.image.nativeElement.src = this._seriesImage.blob;\n  }\n  onSelectedSeris(ev: any) {\n    this.selected.emit(ev);\n  }\n  ngOnChanges(changes: SimpleChanges) {\n    this.borderColor = 'none_selected_item'\n    this.cdr.detectChanges();\n\n    // @ts-ignore\n    const selectedId = localStorage.getItem('selectedSeriesId')\n    // console.log('selectedId', selectedId, this._seriesImage)\n    this.selectedSeriesId = selectedId && JSON.parse(selectedId).series;\n    // console. log('selectedImageId, ', this.selectedSeriesId.category, this._seriesImage.category)\n    if( changes['addClass'] && changes['addClass'].currentValue) {\n     // console.log('series_Item changes', changes, this.selectedSeriesId.category, this._seriesImage.category)\n      if( this.selectedSeriesId.category === this._seriesImage.category) {\n        this.borderColor = 'selected_item';\n      } else {\n        this.borderColor = 'non_selected_item';\n      }\n      this.cdr.detectChanges();\n    }\n  }\n}\n",
+            "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy, ChangeDetectorRef,\n  Component,\n  ElementRef, EventEmitter, Input,\n  OnChanges,\n  OnInit, Output,\n  SimpleChanges, ViewChild\n} from '@angular/core';\nimport {SeriesModel} from \"../../../models/data\";\n\n@Component({\n  selector: 'series-item',\n  template: `\n    <div class=\"mb-1 w-auto\">\n      <div class=\"{{borderColor}}\" (click)=\"selected.emit(_seriesImage)\">\n        <img #img>\n      </div>\n    </div>\n  `,\n  styles: [`\n    img {\n      /*width: 145px;*/\n      width: auto;\n      height:100px;\n      object-fit: fill;\n    }\n    .selected_item {\n      width: auto;\n      border: red solid 4px ;\n    }\n  `],\n   changeDetection: ChangeDetectionStrategy.OnPush}\n)\nexport class SeriesItemComponent implements  AfterViewInit, OnChanges {\n  @ViewChild('img') image?: ElementRef;\n  @Input() set seriesImage (v: any) {\n    // console.log(' series_item seriesImage',v)\n    this._seriesImage = v;\n    if( this.image) {\n      this.image.nativeElement.src = this._seriesImage.blob;\n    }\n    this.cdr.markForCheck();\n  };\n  // @Input() seriesImage: SeriesModel;\n  @Input() set addClass( v: any){\n    this.cdr.markForCheck();\n  }\n  @Output() selected: EventEmitter<any> = new EventEmitter();\n  _seriesImage: SeriesModel;\n  borderColor: any;\n  selectedSeriesId: SeriesModel | undefined;\n  constructor(private cdr: ChangeDetectorRef) { }\n  ngAfterViewInit() {\n    // console.log(' ---- series_item ngAfterViewInit is called', this.selectedSeriesId.category, this._seriesImage.category);\n    this.image.nativeElement.src = this._seriesImage.blob;\n  }\n  ngOnChanges(changes: SimpleChanges) {\n    this.borderColor = 'none_selected_item'\n    this.cdr.detectChanges();\n\n    // @ts-ignore\n    const selectedId = localStorage.getItem('selectedSeriesId')\n    // console.log('selectedId', selectedId, this._seriesImage)\n    this.selectedSeriesId = selectedId && JSON.parse(selectedId).series;\n    // console. log('selectedImageId, ', this.selectedSeriesId.category, this._seriesImage.category)\n    if( changes['addClass'] && changes['addClass'].currentValue) {\n     // console.log('series_Item changes', changes, this.selectedSeriesId.category, this._seriesImage.category)\n      if( this.selectedSeriesId.category === this._seriesImage.category) {\n        this.borderColor = 'selected_item';\n      } else {\n        this.borderColor = 'non_selected_item';\n      }\n      this.cdr.detectChanges();\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    img {\n      /*width: 145px;*/\n      width: auto;\n      height:100px;\n      object-fit: fill;\n    }\n    .selected_item {\n      width: auto;\n      border: red solid 4px ;\n    }\n  \n",
@@ -8881,7 +8853,7 @@
         },
         {
             "name": "ThumbnailItemComponent",
-            "id": "component-ThumbnailItemComponent-d4e0da70b58e1da5e969a272fddbb42e719f6e78b7de11efba922042f00d4301beedf05eb501e1eec67e76e3e27d627a68a8e17a6f0c4beae0c91a0582152e06",
+            "id": "component-ThumbnailItemComponent-ed1c4cf36e32b8aadba3a96c54977f57f7df0e678cf3084cf871f69f3a8a47d86256f17be74a72abb55077a5f50ecdedefb8d416a079f53741d3652a2690c07d",
             "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -9026,7 +8998,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\r\n  AfterViewInit,\r\n  ChangeDetectionStrategy,\r\n  ChangeDetectorRef,\r\n  Component,\r\n  ElementRef,\r\n  EventEmitter,\r\n  Input,\r\n  OnInit,\r\n  Output,\r\n  SimpleChanges,\r\n  ViewChild\r\n} from '@angular/core';\r\nimport {ImageModel} from \"../../../models/data\";\r\n\r\n@Component({\r\n  selector: 'thumbnail-item',\r\n  template: `\r\n    <div class=\"mr-1\">\r\n      <div class=\"{{borderColor}}\" (click)=\"selected.emit(_originalImage)\">\r\n        <img  #img >\r\n      </div>\r\n    </div>\r\n  `,\r\n  styles: [`\r\n    img {\r\n      width: 90px;\r\n      height: 60px;\r\n      object-fit: fill;\r\n      background: antiquewhite;\r\n    }\r\n    .selected_item {\r\n      width: auto;\r\n      height: 68px;\r\n      border: red solid 4px ;\r\n    }\r\n  `],\r\n   changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class ThumbnailItemComponent implements OnInit, AfterViewInit {\r\n  @ViewChild('img') image?: ElementRef;\r\n  @Input() set addClass( v: any){\r\n    this.cdr.markForCheck();\r\n  }\r\n  @Input() set originalImage (v : any ) {\r\n    this._originalImage = v.item;\r\n    if( this.image && this.image.nativeElement) {\r\n      this.image.nativeElement.src = this._originalImage.blob;\r\n      this.cdr.markForCheck();\r\n    }\r\n  }\r\n  @Output() selected: EventEmitter<ImageModel> = new EventEmitter<ImageModel>();\r\n  borderColor!: string ;\r\n  _originalImage: any;\r\n  selectedImageId: ImageModel | undefined;\r\n  constructor(\r\n    private cdr: ChangeDetectorRef\r\n  ) {\r\n  }\r\n\r\n  ngOnInit(): void {\r\n\r\n  }\r\n  ngAfterViewInit() {\r\n    // @ts-ignore\r\n    // console.log(' thumbnail-item -- category',this._originalImage.category)\r\n    this.image.nativeElement.src = this._originalImage.blob;\r\n    this.cdr.markForCheck();\r\n  }\r\n  ngOnChanges(changes: SimpleChanges) {\r\n    this.borderColor = 'none_selected_item'\r\n    this.cdr.markForCheck();\r\n\r\n    // @ts-ignore\r\n    this.selectedImageId = JSON.parse(localStorage.getItem('selectedImageId')).item;\r\n    // console.log('data2 this.selectedImageId', changes['addClass'].currentValue.imageId, this.selectedImageId.imageId, this._originalImage.imageId)\r\n    if( changes['addClass'] && changes['addClass'].currentValue) {\r\n      // @ts-ignore\r\n      if( this.selectedImageId.imageId === this._originalImage.imageId) {\r\n        this.borderColor = 'selected_item';\r\n      } else {\r\n        this.borderColor = 'non_selected_item';\r\n      }\r\n      this.cdr.markForCheck();\r\n    }\r\n  }\r\n}\r\n",
+            "sourceCode": "import {\r\n  AfterViewInit,\r\n  ChangeDetectionStrategy,\r\n  ChangeDetectorRef,\r\n  Component,\r\n  ElementRef,\r\n  EventEmitter,\r\n  Input,\r\n  OnInit,\r\n  Output,\r\n  SimpleChanges,\r\n  ViewChild\r\n} from '@angular/core';\r\nimport {ImageModel} from \"../../../models/data\";\r\n\r\n@Component({\r\n  selector: 'thumbnail-item',\r\n  template: `\r\n    <div class=\"mr-1\">\r\n      <div class=\"{{borderColor}}\" (click)=\"selected.emit(_originalImage)\">\r\n        <img  #img >\r\n      </div>\r\n    </div>\r\n  `,\r\n  styles: [`\r\n    img {\r\n      width: 90px;\r\n      height: 60px;\r\n      object-fit: fill;\r\n      background: antiquewhite;\r\n    }\r\n    .selected_item {\r\n      width: auto;\r\n      height: 68px;\r\n      border: red solid 4px ;\r\n    }\r\n  `],\r\n   changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class ThumbnailItemComponent implements OnInit, AfterViewInit {\r\n  @ViewChild('img') image?: ElementRef;\r\n  @Input() set addClass( v: any){\r\n    this.cdr.markForCheck();\r\n  }\r\n  @Input() set originalImage (v : any ) {\r\n    this._originalImage = v.item;\r\n    if( this.image && this.image.nativeElement) {\r\n      this.image.nativeElement.src = this._originalImage.blob;\r\n      this.cdr.markForCheck();\r\n    }\r\n  }\r\n  @Output() selected: EventEmitter<ImageModel> = new EventEmitter<ImageModel>();\r\n  borderColor!: string ;\r\n  _originalImage: any;\r\n  selectedImageId: ImageModel | undefined;\r\n  constructor(\r\n    private cdr: ChangeDetectorRef\r\n  ) {\r\n  }\r\n\r\n  ngOnInit(): void {\r\n\r\n  }\r\n  ngAfterViewInit() {\r\n    // @ts-ignore\r\n    // console.log(' thumbnail-item -- category',this._originalImage.category)\r\n    this.image.nativeElement.src = this._originalImage.blob;\r\n    // this.cdr.markForCheck();\r\n  }\r\n  ngOnChanges(changes: SimpleChanges) {\r\n    this.borderColor = 'none_selected_item'\r\n    this.cdr.markForCheck();\r\n\r\n    // @ts-ignore\r\n    this.selectedImageId = JSON.parse(localStorage.getItem('selectedImageId')).item;\r\n    // console.log('data2 this.selectedImageId', changes['addClass'].currentValue.imageId, this.selectedImageId.imageId, this._originalImage.imageId)\r\n    if( changes['addClass'] && changes['addClass'].currentValue) {\r\n      // @ts-ignore\r\n      if( this.selectedImageId.imageId === this._originalImage.imageId) {\r\n        this.borderColor = 'selected_item';\r\n      } else {\r\n        this.borderColor = 'non_selected_item';\r\n      }\r\n      this.cdr.markForCheck();\r\n    }\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    img {\n      width: 90px;\n      height: 60px;\n      object-fit: fill;\n      background: antiquewhite;\n    }\n    .selected_item {\n      width: auto;\n      height: 68px;\n      border: red solid 4px ;\n    }\n  \n",
@@ -9125,7 +9097,7 @@
         },
         {
             "name": "ThumbnailListComponent",
-            "id": "component-ThumbnailListComponent-47828955ba32e5d4bd1e9cc616ca176ef84088978c48d9740dd87315eb84adf93a40209cce2aaf25da755b4f66572fe11427032aa76ee94ae6b8870b28d383e2",
+            "id": "component-ThumbnailListComponent-0c4141b5b7b90f317f3530bd3c011987d723406bbf15cbef7be205f2e5d83ec875c2562cfd0ce230c790e2ac9cae18df27f62da7ffca238309afc064961d690d",
             "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -9301,7 +9273,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  ChangeDetectorRef,\n  Component, EventEmitter,\n  Injectable,\n  Input, OnDestroy,\n  OnInit, Output,\n  ViewChild\n} from '@angular/core';\nimport {\n  CdkVirtualScrollViewport,\n  FixedSizeVirtualScrollStrategy,\n  VIRTUAL_SCROLL_STRATEGY\n} from \"@angular/cdk/scrolling\";\nimport {Select} from \"@ngxs/store\";\nimport {StatusState} from \"../../../../state/status/status.state\";\n\nimport {Observable, Subject} from \"rxjs\";\nimport {ImageModel} from \"../../../models/data\";\nimport {take, takeUntil} from \"rxjs/operators\";\n@Injectable()\nexport class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {\n  constructor() {\n    /** Below value is assumed, that could contain at most 100 image pixel data at one time.\n     * If less than this value, the image data tend to be shuffled by sharing memory usage while scrolling  */\n    super(90, 10000, 10000); // (itemSize, minBufferPx, maxBufferPx)\n  }\n}\n\n@Component({\n  selector: 'thumbnail-list',\n  template: `\n    <div class=\"mt-1\">\n      <div class=\"cdk-scroll-source\" style=\"width: 99%\">\n        <cdk-virtual-scroll-viewport\n          class=\"cdk-scroll-viewport\"\n          orientation=\"horizontal\" >\n          <ng-container *cdkVirtualFor=\"let item of _currentImages\">\n            <thumbnail-item [originalImage]=\"item\"\n                            [addClass]=\"addClass\"\n                            (selected) = onSelectItem($event)>\n            </thumbnail-item>\n          </ng-container>\n        </cdk-virtual-scroll-viewport>\n      </div>\n    </div>  `,\n  styles: [`\n    .cdk-scroll-source {\n      writing-mode: vertical-lr;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport {\n      height: 90px;\n      width: 100%;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport .cdk-virtual-scroll-content-wrapper {\n      display: flex;\n      flex-direction: row;\n    }\n  `],\n  providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}],\n  changeDetection: ChangeDetectionStrategy.OnPush\n\n})\nexport class ThumbnailListComponent implements OnInit, AfterViewInit {\n  @Input() set selectedImage (v: any){\n    if( v ) {\n      v && this.onSelectItem(v.item);\n      this.cdr.markForCheck();\n    }\n  };\n  @Input() set currentImages (im:  any) {\n    // console.log(' currentImages', im)\n    this._currentImages = im;\n    this.cdr.markForCheck();\n  }\n  @Output() selectItem = new EventEmitter<any>();\n  @ViewChild(CdkVirtualScrollViewport, { static: true }) viewPort: CdkVirtualScrollViewport | undefined;\n  @Select(StatusState.getSelectedImageById)  getSelectedImageById$: Observable<ImageModel>;\n  _currentImages: any;\n  addClass: {} = {};\n  draggedInx = 0;\n  idx = 0;\n\n  constructor(\n    private cdr: ChangeDetectorRef,\n  ) { }\n\n  ngOnInit(): void {\n    const initial_value = {\n      item: {\n        imageId: 1,\n        category: 'animal',\n        url: '',\n        blob: '',\n        title: ''\n      }\n    }\n    localStorage.setItem('selectedImageId', JSON.stringify(initial_value));\n    /**\n     * Triggered from series-list.component ( onSelectSeries),\n     *      carousel.service (getPrevImage, getNextImage)\n     */\n    this.getSelectedImageById$.pipe(\n      // takeUntil(this.unsubscribe$)\n      take(1)\n    ).subscribe( (image: any) => {\n\n      // To synchronize with the current selected item, after when it is activated by clicking item-list\n      localStorage.setItem('selectedImageId', JSON.stringify({item: image}));\n      setTimeout(() => {\n      // console.log(' data1 -', image.imageId)\n        this.viewPort.scrollToIndex(image.imageId, 'smooth')\n        this.addClass = {\n          class:'selected_item',\n          imageId: image.imageId\n        }\n      this.cdr.markForCheck();\n      },200);\n    })\n    ///\n  }\n  ngAfterViewInit() {\n    // Because of not focused with red border even though clicking item just after staring.\n    setTimeout(()=> {\n      this.addClass = {\n        class: 'selected_item',\n        index: 1\n      }\n    })\n  }\n\n  onSelectItem(ev:ImageModel) {\n    console.log( '--- thumbnail-list id', ev )\n    if( !ev) return;\n\n    localStorage.setItem('selectedImageId', JSON.stringify({item:ev}));\n    this.selectItem.emit(ev); // send to home.component\n    /**\n     * To synchronize with the current selected item, after when it is activated by clicking item-list\n     * */\n    setTimeout(() => {\n      this.viewPort?.scrollToIndex(ev.imageId, 'smooth')\n      this.addClass = {\n        class: 'selected_item',\n        index: ev.imageId\n      }\n      this.cdr.detectChanges();\n    },300);\n  }\n}\n",
+            "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  ChangeDetectorRef,\n  Component, EventEmitter,\n  Injectable,\n  Input, OnDestroy,\n  OnInit, Output,\n  ViewChild\n} from '@angular/core';\nimport {\n  CdkVirtualScrollViewport,\n  FixedSizeVirtualScrollStrategy,\n  VIRTUAL_SCROLL_STRATEGY\n} from \"@angular/cdk/scrolling\";\nimport {Select} from \"@ngxs/store\";\nimport {StatusState} from \"../../../../state/status/status.state\";\n\nimport {Observable, Subject} from \"rxjs\";\nimport {ImageModel} from \"../../../models/data\";\nimport {take, takeUntil} from \"rxjs/operators\";\n@Injectable()\nexport class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {\n  constructor() {\n    /** Below value is assumed, that could contain at most 100 image pixel data at one time.\n     * If less than this value, the image data tend to be shuffled by sharing memory usage while scrolling  */\n    super(90, 10000, 10000); // (itemSize, minBufferPx, maxBufferPx)\n  }\n}\n\n@Component({\n  selector: 'thumbnail-list',\n  template: `\n    <div class=\"mt-1\">\n      <div class=\"cdk-scroll-source\" style=\"width: 99%\">\n        <cdk-virtual-scroll-viewport\n          class=\"cdk-scroll-viewport\"\n          orientation=\"horizontal\" >\n          <ng-container *cdkVirtualFor=\"let item of _currentImages\">\n            <thumbnail-item [originalImage]=\"item\"\n                            [addClass]=\"addClass\"\n                            (selected) = onSelectItem($event)>\n            </thumbnail-item>\n          </ng-container>\n        </cdk-virtual-scroll-viewport>\n      </div>\n    </div>  `,\n  styles: [`\n    .cdk-scroll-source {\n      writing-mode: vertical-lr;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport {\n      height: 90px;\n      width: 100%;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport .cdk-virtual-scroll-content-wrapper {\n      display: flex;\n      flex-direction: row;\n    }\n  `],\n  providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}],\n  changeDetection: ChangeDetectionStrategy.OnPush\n\n})\nexport class ThumbnailListComponent implements OnInit, AfterViewInit {\n  @Input() set selectedImage (v: any){\n    if( v ) {\n      v && this.onSelectItem(v.item);\n      this.cdr.markForCheck();\n    }\n  };\n  @Input() set currentImages (im:  any) {\n    // console.log(' currentImages', im)\n    this._currentImages = im;\n    this.cdr.markForCheck();\n  }\n  @Output() selectItem = new EventEmitter<any>();\n  @ViewChild(CdkVirtualScrollViewport, { static: true }) viewPort: CdkVirtualScrollViewport | undefined;\n  @Select(StatusState.getSelectedImageById)  getSelectedImageById$: Observable<ImageModel>;\n  _currentImages: any;\n  addClass: {} = {};\n  draggedInx = 0;\n  idx = 0;\n\n  constructor(\n    private cdr: ChangeDetectorRef,\n  ) { }\n\n  ngOnInit(): void {\n    const initial_value = {\n      item: {\n        imageId: 1,\n        category: 'animal',\n        url: '',\n        blob: '',\n        title: ''\n      }\n    }\n    localStorage.setItem('selectedImageId', JSON.stringify(initial_value));\n    /**\n     * Triggered from series-list.component ( onSelectSeries),\n     *      carousel.service (getPrevImage, getNextImage)\n     */\n    this.getSelectedImageById$.pipe(\n      // takeUntil(this.unsubscribe$)\n      take(1)\n    ).subscribe( (image: any) => {\n\n      // To synchronize with the current selected item, after when it is activated by clicking item-list\n      localStorage.setItem('selectedImageId', JSON.stringify({item: image}));\n      setTimeout(() => {\n      // console.log(' data1 -', image.imageId)\n        this.viewPort.scrollToIndex(image.imageId, 'smooth')\n        this.addClass = {\n          class:'selected_item',\n          imageId: image.imageId\n        }\n      this.cdr.markForCheck();\n      },200);\n    })\n    ///\n  }\n  ngAfterViewInit() {\n    // Because of not focused with red border even though clicking item just after staring.\n    setTimeout(()=> {\n      this.addClass = {\n        class: 'selected_item',\n        index: 1\n      }\n    })\n  }\n\n  onSelectItem(ev:ImageModel) {\n    // console.log( '--- thumbnail-list id', ev )\n    if( !ev) return;\n\n    localStorage.setItem('selectedImageId', JSON.stringify({item:ev}));\n    this.selectItem.emit(ev); // send to home.component\n    /**\n     * To synchronize with the current selected item, after when it is activated by clicking item-list\n     * */\n    setTimeout(() => {\n      this.viewPort?.scrollToIndex(ev.imageId, 'smooth')\n      this.addClass = {\n        class: 'selected_item',\n        index: ev.imageId\n      }\n      this.cdr.detectChanges();\n    },300);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    .cdk-scroll-source {\n      writing-mode: vertical-lr;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport {\n      height: 90px;\n      width: 100%;\n    }\n    .cdk-scroll-source .cdk-scroll-viewport .cdk-virtual-scroll-content-wrapper {\n      display: flex;\n      flex-direction: row;\n    }\n  \n",
@@ -10001,17 +9973,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -10031,7 +9993,17 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -10051,7 +10023,7 @@
                 "name": "DefaultMode",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/grid/display-grid/display-grid.component.stories.ts",
+                "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -10061,7 +10033,7 @@
                 "name": "DefaultMode",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
+                "file": "src/app/components/grid/display-grid/display-grid.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -10111,11 +10083,11 @@
                 "name": "initial_value",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                "file": "src/app/components/series/series-item/series-item.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  item: {\r\n    imageId: 3,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
+                "defaultValue": "{\r\n  series: {\r\n    seriesId: 0,\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    category: 'animal'\r\n  }\r\n}"
             },
             {
                 "name": "initial_value",
@@ -10131,11 +10103,11 @@
                 "name": "initial_value",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  series: {\r\n    seriesId: 0,\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    category: 'animal'\r\n  }\r\n}"
+                "defaultValue": "{\r\n  item: {\r\n    imageId: 3,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
             },
             {
                 "name": "materials",
@@ -10240,11 +10212,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/carousel/carousel-main/carousel-main.component.stories.ts",
+                "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<CarouselMainComponent>",
-                "defaultValue": "(args: CarouselMainComponent) => ({\n  props: args,\n  template: `\n    <app-carousel-main [queryElement]=\"queryElement\"></app-carousel-main>\n  `,\n\n})"
+                "type": "Story<GridMenuComponent>",
+                "defaultValue": "(args: GridMenuComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectMode: action('selectMode')\r\n  },\r\n  template: `\r\n    <grid-menu (selectMode)=\"onSelectMode($event)\"></grid-menu>\r\n    `\r\n})"
             },
             {
                 "name": "Template",
@@ -10264,17 +10236,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<DisplayGridComponent>",
-                "defaultValue": "(args: DisplayGridComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectedTemplate: action('onSelectTemplate')\r\n  },\r\n  template: `\r\n    <div class=\"text-red-600\">Display Grid</div>\r\n    <display-grid [splitMode]=\"splitMode\"\r\n        (onSelectTemplate)=\"onSelectedTemplate($event)\">\r\n    </display-grid>\r\n    `\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<GridMenuComponent>",
-                "defaultValue": "(args: GridMenuComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectMode: action('selectMode')\r\n  },\r\n  template: `\r\n    <grid-menu (selectMode)=\"onSelectMode($event)\"></grid-menu>\r\n    `\r\n})"
+                "defaultValue": "(args: DisplayGridComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectedTemplate: action('selectTpl')\r\n  },\r\n  template: `\r\n    <div class=\"text-red-600\">Display Grid</div>\r\n    <display-grid [splitMode]=\"splitMode\"\r\n        (selectTpl)=\"onSelectedTemplate($event)\">\r\n    </display-grid>\r\n    `\r\n})"
             },
             {
                 "name": "Template",
@@ -10290,21 +10252,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                "file": "src/app/components/carousel/carousel-main/carousel-main.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ThumbnailListComponent>",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <thumbnail-list [selectedImage]=\"selectedImage\"\r\n        [currentImages]=\"currentImages\"\r\n        (selected)=\"onSelected($event)\">\r\n    </thumbnail-list>\r\n  `\r\n})"
+                "type": "Story<CarouselMainComponent>",
+                "defaultValue": "(args: CarouselMainComponent) => ({\n  props: args,\n  template: `\n    <app-carousel-main [queryElement]=\"queryElement\"></app-carousel-main>\n  `,\n\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ThumbnailItemComponent>",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
+                "type": "Story<SeriesListComponent>",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selectSeries')\r\n  },\r\n  template: `\r\n    <div class=\"w-36\">\r\n      <series-list [selectedSeries]=\"selectedSeries\"\r\n                  [currentSeries]=\"currentSeries\"\r\n                  (selectSeries)=\"onSelected($event)\">\r\n      </series-list>\r\n    </div>\r\n  `\r\n})"
             },
             {
                 "name": "Template",
@@ -10320,11 +10282,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<SeriesListComponent>",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selectSeries')\r\n  },\r\n  template: `\r\n    <div class=\"w-36\">\r\n      <series-list [selectedSeries]=\"selectedSeries\"\r\n                  [currentSeries]=\"currentSeries\"\r\n                  (selectSeries)=\"onSelected($event)\">\r\n      </series-list>\r\n    </div>\r\n  `\r\n})"
+                "type": "Story<ThumbnailItemComponent>",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ThumbnailListComponent>",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <thumbnail-list [selectedImage]=\"selectedImage\"\r\n        [currentImages]=\"currentImages\"\r\n        (selected)=\"onSelected($event)\">\r\n    </thumbnail-list>\r\n  `\r\n})"
             },
             {
                 "name": "Template",
@@ -10606,7 +10578,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "4ef212ad-11de-46e8-9173-0ee37a518896",
+                        "destrucuredGroupId": "46a702ab-0ef0-4ed5-9c71-f26d4c8b506b",
                         "destructuredParameter": true
                     }
                 ],
@@ -10616,7 +10588,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "4ef212ad-11de-46e8-9173-0ee37a518896",
+                        "destrucuredGroupId": "46a702ab-0ef0-4ed5-9c71-f26d4c8b506b",
                         "destructuredParameter": true,
                         "tagName": {
                             "text": "param"
@@ -10638,7 +10610,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "7ee5ef13-d13f-42b9-85f3-ce90b22f4ed2",
+                        "destrucuredGroupId": "949c1383-0f8d-459f-8940-928eb507bd57",
                         "destructuredParameter": true
                     }
                 ],
@@ -10648,7 +10620,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "7ee5ef13-d13f-42b9-85f3-ce90b22f4ed2",
+                        "destrucuredGroupId": "949c1383-0f8d-459f-8940-928eb507bd57",
                         "destructuredParameter": true,
                         "tagName": {
                             "text": "param"
@@ -10670,7 +10642,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "ef10bd3d-aa05-4434-8ae2-7417469474fe",
+                        "destrucuredGroupId": "12799533-4565-4555-b01e-b31e1c4dd27e",
                         "destructuredParameter": true
                     }
                 ],
@@ -10680,7 +10652,7 @@
                         "type": "",
                         "deprecated": false,
                         "deprecationMessage": "",
-                        "destrucuredGroupId": "ef10bd3d-aa05-4434-8ae2-7417469474fe",
+                        "destrucuredGroupId": "12799533-4565-4555-b01e-b31e1c4dd27e",
                         "destructuredParameter": true,
                         "tagName": {
                             "text": "param"
@@ -10719,7 +10691,7 @@
             },
             {
                 "name": "initialize",
-                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                "file": "src/app/components/series/series-item/series-item.component.stories.ts",
                 "ctype": "miscellaneous",
                 "subtype": "function",
                 "deprecated": false,
@@ -10739,7 +10711,7 @@
             },
             {
                 "name": "initialize",
-                "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                 "ctype": "miscellaneous",
                 "subtype": "function",
                 "deprecated": false,
@@ -10960,6 +10932,122 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
+            "src/app/components/series/seires-list/series-list.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "SeriesList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SeriesListComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selectSeries')\r\n  },\r\n  template: `\r\n    <div class=\"w-36\">\r\n      <series-list [selectedSeries]=\"selectedSeries\"\r\n                  [currentSeries]=\"currentSeries\"\r\n                  (selectSeries)=\"onSelected($event)\">\r\n      </series-list>\r\n    </div>\r\n  `\r\n})"
+                }
+            ],
+            "src/app/components/series/series-item/series-item.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "initial_value",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  series: {\r\n    seriesId: 0,\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    category: 'animal'\r\n  }\r\n}"
+                },
+                {
+                    "name": "SelectedSeries",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SeriesItemComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-36\">\r\n      <series-item [addClass]=\"addClass\"\r\n                      [seriesImage]=\"seriesImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </series-item>\r\n    </div>\r\n  `\r\n})"
+                }
+            ],
+            "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "initial_value",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  item: {\r\n    imageId: 1,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
+                },
+                {
+                    "name": "SelectedItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ThumbnailItemComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
+                }
+            ],
             "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts": [
                 {
                     "name": "Default",
@@ -11012,122 +11100,6 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
-            "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "initial_value",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  item: {\r\n    imageId: 1,\r\n    category: 'animal',\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    title: ''\r\n  }\r\n}"
-                },
-                {
-                    "name": "SelectedItem",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/thumbnail/thumbnail-item/thumbnail-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ThumbnailItemComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-24\">\r\n      <thumbnail-item [addClass]=\"addClass\"\r\n                      [originalImage]=\"originalImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </thumbnail-item>\r\n    </div>\r\n  `\r\n})"
-                }
-            ],
-            "src/app/components/series/series-item/series-item.component.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "initial_value",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  series: {\r\n    seriesId: 0,\r\n    url: '',\r\n    blob: 'assets/sample_images/128.png',\r\n    category: 'animal'\r\n  }\r\n}"
-                },
-                {
-                    "name": "SelectedSeries",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<SeriesItemComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selected')\r\n  },\r\n  template: `\r\n    <div class=\"w-36\">\r\n      <series-item [addClass]=\"addClass\"\r\n                      [seriesImage]=\"seriesImage\"\r\n                      (selected)=\"onSelected($event)\">\r\n      </series-item>\r\n    </div>\r\n  `\r\n})"
-                }
-            ],
-            "src/app/components/series/seires-list/series-list.component.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "SeriesList",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/series/seires-list/series-list.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<SeriesListComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onSelected: action('selectSeries')\r\n  },\r\n  template: `\r\n    <div class=\"w-36\">\r\n      <series-list [selectedSeries]=\"selectedSeries\"\r\n                  [currentSeries]=\"currentSeries\"\r\n                  (selectSeries)=\"onSelected($event)\">\r\n      </series-list>\r\n    </div>\r\n  `\r\n})"
-                }
-            ],
             "src/app/components/carousel/carousel-main/carousel-main-display/carousel-main-display.component.stories.ts": [
                 {
                     "name": "Default",
@@ -11148,6 +11120,28 @@
                     "deprecationMessage": "",
                     "type": "Story<CarouselMainDisplayComponent>",
                     "defaultValue": "(agrs:CarouselMainDisplayComponent) => ({\r\n  props: {\r\n    ...agrs\r\n  },\r\n  template: `\r\n      <div class=\"w-auto h-auto\">\r\n        <carousel-main-display\r\n          [progress]=\"progress\"\r\n          [splitIdx]=\"splitIdx\"\r\n          [img]=\"image\"  >\r\n        </carousel-main-display>\r\n      </div>\r\n  `\r\n})"
+                }
+            ],
+            "src/app/components/grid/grid-menu/grid-menu.component.stories.ts": [
+                {
+                    "name": "DefaultMode",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<GridMenuComponent>",
+                    "defaultValue": "(args: GridMenuComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectMode: action('selectMode')\r\n  },\r\n  template: `\r\n    <grid-menu (selectMode)=\"onSelectMode($event)\"></grid-menu>\r\n    `\r\n})"
                 }
             ],
             "src/app/components/grid/display-grid/display-grid.component.stories.ts": [
@@ -11199,29 +11193,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<DisplayGridComponent>",
-                    "defaultValue": "(args: DisplayGridComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectedTemplate: action('onSelectTemplate')\r\n  },\r\n  template: `\r\n    <div class=\"text-red-600\">Display Grid</div>\r\n    <display-grid [splitMode]=\"splitMode\"\r\n        (onSelectTemplate)=\"onSelectedTemplate($event)\">\r\n    </display-grid>\r\n    `\r\n})"
-                }
-            ],
-            "src/app/components/grid/grid-menu/grid-menu.component.stories.ts": [
-                {
-                    "name": "DefaultMode",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/grid/grid-menu/grid-menu.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<GridMenuComponent>",
-                    "defaultValue": "(args: GridMenuComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectMode: action('selectMode')\r\n  },\r\n  template: `\r\n    <grid-menu (selectMode)=\"onSelectMode($event)\"></grid-menu>\r\n    `\r\n})"
+                    "defaultValue": "(args: DisplayGridComponent) => ({\r\n  props: {\r\n    ...args,\r\n    onSelectedTemplate: action('selectTpl')\r\n  },\r\n  template: `\r\n    <div class=\"text-red-600\">Display Grid</div>\r\n    <display-grid [splitMode]=\"splitMode\"\r\n        (selectTpl)=\"onSelectedTemplate($event)\">\r\n    </display-grid>\r\n    `\r\n})"
                 }
             ],
             "src/app/components/grid/display-grid/display-grid-template.component.stories.ts": [
@@ -11398,7 +11370,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "4ef212ad-11de-46e8-9173-0ee37a518896",
+                            "destrucuredGroupId": "46a702ab-0ef0-4ed5-9c71-f26d4c8b506b",
                             "destructuredParameter": true
                         }
                     ],
@@ -11408,7 +11380,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "4ef212ad-11de-46e8-9173-0ee37a518896",
+                            "destrucuredGroupId": "46a702ab-0ef0-4ed5-9c71-f26d4c8b506b",
                             "destructuredParameter": true,
                             "tagName": {
                                 "text": "param"
@@ -11503,7 +11475,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "7ee5ef13-d13f-42b9-85f3-ce90b22f4ed2",
+                            "destrucuredGroupId": "949c1383-0f8d-459f-8940-928eb507bd57",
                             "destructuredParameter": true
                         }
                     ],
@@ -11513,7 +11485,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "7ee5ef13-d13f-42b9-85f3-ce90b22f4ed2",
+                            "destrucuredGroupId": "949c1383-0f8d-459f-8940-928eb507bd57",
                             "destructuredParameter": true,
                             "tagName": {
                                 "text": "param"
@@ -11608,7 +11580,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "ef10bd3d-aa05-4434-8ae2-7417469474fe",
+                            "destrucuredGroupId": "12799533-4565-4555-b01e-b31e1c4dd27e",
                             "destructuredParameter": true
                         }
                     ],
@@ -11618,7 +11590,7 @@
                             "type": "",
                             "deprecated": false,
                             "deprecationMessage": "",
-                            "destrucuredGroupId": "ef10bd3d-aa05-4434-8ae2-7417469474fe",
+                            "destrucuredGroupId": "12799533-4565-4555-b01e-b31e1c4dd27e",
                             "destructuredParameter": true,
                             "tagName": {
                                 "text": "param"
@@ -11773,10 +11745,10 @@
                     ]
                 }
             ],
-            "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts": [
+            "src/app/components/series/series-item/series-item.component.stories.ts": [
                 {
                     "name": "initialize",
-                    "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
+                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
                     "ctype": "miscellaneous",
                     "subtype": "function",
                     "deprecated": false,
@@ -11797,10 +11769,10 @@
                     "args": []
                 }
             ],
-            "src/app/components/series/series-item/series-item.component.stories.ts": [
+            "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts": [
                 {
                     "name": "initialize",
-                    "file": "src/app/components/series/series-item/series-item.component.stories.ts",
+                    "file": "src/app/components/thumbnail/thumbnail-list/thumbnail-list.component.stories.ts",
                     "ctype": "miscellaneous",
                     "subtype": "function",
                     "deprecated": false,
@@ -12278,7 +12250,7 @@
                 "linktype": "component",
                 "name": "SeriesItemComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/12",
+                "coverageCount": "0/11",
                 "status": "low"
             },
             {

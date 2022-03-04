@@ -128,9 +128,10 @@ Below seq. no is related with above diagram.
 
 #### Deploy information
 
-ng build --base-href "https://wsjung0516.github.io/split-window220225/"
-npx ngh --dir=dist/split-window220225
-if above command is now working, please refer following site --> https://github.com/angular-schule/angular-cli-ghpages
+1. ng build --base-href "https://wsjung0516.github.io/split-window220225/"
+2. ng add angular-cli-ghpages
+3. npx ngh --dir=dist/split-window220225
+if above command is not working, please refer following site --> https://github.com/angular-schule/angular-cli-ghpages
 
 
 
